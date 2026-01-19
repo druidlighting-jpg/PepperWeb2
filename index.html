@@ -58,6 +58,14 @@
             top: 0;
             z-index: 1001;
             animation: slideDown 0.5s ease-out;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .announcement-bar:hover {
+            background: #c10812;
         }
 
         @keyframes slideDown {
@@ -105,15 +113,9 @@
         .announcement-link {
             font-size: 0.8rem;
             color: white;
-            text-decoration: none;
             font-weight: 500;
-            transition: var(--transition);
             border-bottom: 1px solid rgba(255,255,255,0.5);
             padding-bottom: 1px;
-        }
-
-        .announcement-link:hover {
-            border-bottom-color: white;
         }
 
         /* Header */
@@ -738,16 +740,39 @@
             .hero-question { font-size: 1.3rem; }
 
             .announcement-bar {
-                padding: 0.6rem 1rem;
+                position: fixed;
+                top: auto;
+                bottom: 0; /* Move to bottom of screen on mobile */
+                padding: 0.75rem 1rem;
+                transition: transform 0.3s ease;
+            }
+
+            .announcement-bar.hidden {
+                transform: translateY(100%);
             }
 
             .announcement-inner {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
                 gap: 0.5rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .announcement-badge {
+                font-size: 0.6rem;
             }
 
             .announcement-text {
-                text-align: center;
+                font-size: 0.75rem;
+            }
+
+            .announcement-link {
+                font-size: 0.75rem;
+                white-space: nowrap;
+            }
+
+            header {
+                top: 0;
             }
 
             .footer-inner {
@@ -802,13 +827,13 @@
     </style>
 </head>
 <body>
-    <div class="announcement-bar">
+    <a href="billionaire-backlash.html" class="announcement-bar">
         <div class="announcement-inner">
             <span class="announcement-badge">Coming 2026</span>
             <span class="announcement-text"><strong>Billionaire Backlash</strong> — The Age of Corporate Scandal and How It Could Save Democracy</span>
-            <a href="books.html" class="announcement-link">Learn more →</a>
+            <span class="announcement-link">Learn more →</span>
         </div>
-    </div>
+    </a>
 
     <header id="header">
         <div class="header-inner">
@@ -1063,6 +1088,27 @@
 
         // Initialize
         updateCarousel();
+    </script>
+    <script>
+        // Hide announcement bar on scroll (mobile only)
+        if (window.innerWidth <= 600) {
+            let lastScroll = 0;
+            const announcementBar = document.querySelector('.announcement-bar');
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > 100 && currentScroll > lastScroll) {
+                    // Scrolling down
+                    announcementBar.classList.add('hidden');
+                } else if (currentScroll < lastScroll) {
+                    // Scrolling up
+                    announcementBar.classList.remove('hidden');
+                }
+
+                lastScroll = currentScroll;
+            });
+        }
     </script>
 </body>
 </html>
