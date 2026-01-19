@@ -51,6 +51,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .site-title {
@@ -399,8 +400,14 @@
 
         @media (max-width: 600px) {
             .header-inner {
-                flex-direction: column;
-                gap: 1rem;
+                flex-direction: row;
+                gap: 0;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .header-title-row {
+                flex: 1;
             }
 
             nav ul {
@@ -447,11 +454,76 @@
             width: 18px;
             height: 18px;
         }
+
+        /* Mobile Menu Button - Simple Approach */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--color-charcoal);
+            border-radius: 3px;
+            padding: 4px 8px;
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--color-charcoal);
+            color: var(--color-cream);
+        }
+
+        @media (max-width: 600px) {
+            .mobile-menu-btn {
+                display: block;
+                position: relative;
+                z-index: 1002;
+                margin-right: 12px;
+            }
+
+            header nav {
+                display: none !important;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-warm-white);
+                border: 1px solid var(--color-border);
+                border-top: none;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                padding: 1rem 0;
+            }
+
+            header nav.menu-open {
+                display: block !important;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            header nav li {
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            header nav li:last-child {
+                border-bottom: none;
+            }
+
+            header nav a {
+                display: block;
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-inner">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
             <div class="header-title-row">
                 <a href="index.html" class="site-title">Pepper D. Culpepper</a>
                 <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener" class="bluesky-link" aria-label="Bluesky">
@@ -588,5 +660,28 @@
             </nav>
         </div>
     </footer>
+
+    <script>
+        // Simple Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.querySelector('header nav');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('menu-open');
+                this.classList.toggle('menu-active');
+                this.textContent = navMenu.classList.contains('menu-open') ? '✕' : '☰';
+            });
+
+            // Close menu when clicking nav links
+            document.querySelectorAll('header nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('menu-open');
+                    mobileMenuBtn.classList.remove('menu-active');
+                    mobileMenuBtn.textContent = '☰';
+                });
+            });
+        }
+    </script>
 </body>
 </html>
