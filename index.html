@@ -824,6 +824,39 @@
             width: 18px;
             height: 18px;
         }
+
+        /* Mobile Menu Button - Simple Approach */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid var(--color-charcoal);
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--color-charcoal);
+            color: var(--color-cream);
+        }
+
+        @media (max-width: 600px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                display: none !important;
+            }
+
+            nav.menu-open {
+                display: flex !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -856,6 +889,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
         </div>
     </header>
 
@@ -1042,6 +1076,25 @@
                 header.classList.remove('scrolled');
             }
         });
+
+        // Simple Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.querySelector('header nav');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('menu-open');
+                this.textContent = navMenu.classList.contains('menu-open') ? '✕' : '☰';
+            });
+
+            // Close menu when clicking nav links
+            document.querySelectorAll('header nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('menu-open');
+                    mobileMenuBtn.textContent = '☰';
+                });
+            });
+        }
 
         // Books carousel
         const track = document.querySelector('.books-track');
