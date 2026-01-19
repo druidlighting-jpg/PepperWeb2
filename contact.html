@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pepper D. Culpepper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #f9f6f1;
+            --color-warm-white: #fdfcfa;
+            --color-charcoal: #2d2d2d;
+            --color-charcoal-light: #4a4a4a;
+            --color-slate: #6b6b6b;
+            --color-terracotta: #c17f59;
+            --color-border: #e8e4de;
+            --font-serif: 'Fraunces', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 14px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ::selection { background: var(--color-terracotta); color: white; }
+
+        /* Header */
+        header {
+            padding: 1.5rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(249, 246, 241, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            text-decoration: none;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a {
+            color: var(--color-slate);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        nav a:hover, nav a.active { color: var(--color-charcoal); }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 10rem 2rem 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-intro {
+            font-size: 1.1rem;
+            color: var(--color-charcoal-light);
+            line-height: 1.8;
+            max-width: 550px;
+            margin-bottom: 4rem;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        /* Contact Info */
+        .contact-info {}
+
+        .contact-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-slate);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-value {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--color-charcoal);
+        }
+
+        .contact-value a {
+            color: var(--color-charcoal);
+            text-decoration: underline;
+            text-decoration-color: var(--color-border);
+            text-underline-offset: 4px;
+            transition: var(--transition);
+        }
+
+        .contact-value a:hover {
+            text-decoration-color: var(--color-terracotta);
+        }
+
+        /* Affiliations */
+        .affiliations {
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-border);
+            padding: 2.5rem;
+        }
+
+        .affiliations-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 2rem;
+        }
+
+        .affiliation-item {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .affiliation-item:first-child {
+            padding-top: 0;
+        }
+
+        .affiliation-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .affiliation-name {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-bottom: 0.25rem;
+        }
+
+        .affiliation-role {
+            font-size: 0.9rem;
+            color: var(--color-slate);
+        }
+
+        /* Address */
+        .address-section {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--color-charcoal);
+            color: white;
+        }
+
+        .address-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .address-block {}
+
+        .address-title {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .address-text {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+
+        /* Profiles */
+        .profiles-section {
+            margin-top: 4rem;
+        }
+
+        .profiles-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .profiles-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-link {
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+            text-decoration: none;
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+
+        .profile-link:hover {
+            border-color: var(--color-charcoal);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-warm-white);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left { font-size: 0.9rem; color: var(--color-slate); }
+        .footer-left a { color: var(--color-slate); text-decoration: none; }
+        .footer-nav { display: flex; gap: 2rem; }
+        .footer-nav a { font-size: 0.85rem; color: var(--color-slate); text-decoration: none; transition: var(--transition); }
+        .footer-nav a:hover { color: var(--color-charcoal); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            html { font-size: 16px; }
+            .page-title { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .address-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .address-section { margin-left: -2rem; margin-right: -2rem; }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner { flex-direction: column; gap: 1rem; }
+            nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            main { padding-top: 14rem; }
+            .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+            .footer-nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        }
+
+        .header-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .bluesky-link {
+            display: flex;
+            align-items: center;
+            color: var(--color-slate);
+            transition: var(--transition);
+        }
+
+        .bluesky-link:hover {
+            color: #0085ff;
+        }
+
+        .bluesky-link svg {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="header-title-row">
+                <a href="index.html" class="site-title">Pepper D. Culpepper</a>
+                <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener" class="bluesky-link" aria-label="Bluesky">
+                <svg viewBox="0 0 600 530" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+            </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <p class="page-label">Get in Touch</p>
+        <h1 class="page-title">Contact</h1>
+        <p class="page-intro">
+            I welcome inquiries about research collaborations, graduate supervision, speaking engagements, and media commentary.
+        </p>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-block">
+                    <p class="contact-label">Email</p>
+                    <p class="contact-value">
+                        <a href="mailto:pepper.culpepper@bsg.ox.ac.uk">pepper.culpepper@bsg.ox.ac.uk</a>
+                    </p>
+                </div>
+
+                <div class="contact-block">
+                    <p class="contact-label">Institutional Page</p>
+                    <p class="contact-value">
+                        <a href="https://www.bsg.ox.ac.uk/people/pepper-culpepper">Blavatnik School Profile</a>
+                    </p>
+                </div>
+
+                <div class="contact-block">
+                    <p class="contact-label">Personal Site</p>
+                    <p class="contact-value">
+                        <a href="http://www.pepperculpepper.net">pepperculpepper.net</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="affiliations">
+                <h2 class="affiliations-title">Affiliations</h2>
+                
+                <div class="affiliation-item">
+                    <p class="affiliation-name">Blavatnik School of Government</p>
+                    <p class="affiliation-role">Vice Dean &amp; Blavatnik Chair</p>
+                </div>
+
+                <div class="affiliation-item">
+                    <p class="affiliation-name">Nuffield College, Oxford</p>
+                    <p class="affiliation-role">Professorial Fellow</p>
+                </div>
+
+                <div class="affiliation-item">
+                    <p class="affiliation-name">University of Oxford</p>
+                    <p class="affiliation-role">Professor of Politics &amp; Public Policy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="address-section">
+            <div class="address-grid">
+                <div class="address-block">
+                    <h3 class="address-title">Blavatnik School of Government</h3>
+                    <p class="address-text">
+                        Radcliffe Observatory Quarter<br>
+                        Woodstock Road<br>
+                        Oxford OX2 6GG<br>
+                        United Kingdom
+                    </p>
+                </div>
+                <div class="address-block">
+                    <h3 class="address-title">Nuffield College</h3>
+                    <p class="address-text">
+                        New Road<br>
+                        Oxford OX1 1NF<br>
+                        United Kingdom
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profiles-section">
+            <h2 class="profiles-title">Academic Profiles</h2>
+            <div class="profiles-grid">
+                <a href="https://scholar.google.com/citations?user=bJiRRDcAAAAJ" class="profile-link" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://www.bsg.ox.ac.uk/people/pepper-culpepper" class="profile-link" target="_blank" rel="noopener">Blavatnik School</a>
+                <a href="https://www.nuffield.ox.ac.uk/people/profiles/pepper-culpepper/" class="profile-link" target="_blank" rel="noopener">Nuffield College</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                © 2025 Pepper D. Culpepper
+            </div>
+            <nav class="footer-nav">
+                <a href="books.html">Books</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="media.html">Media</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

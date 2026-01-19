@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Pepper D. Culpepper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #f9f6f1;
+            --color-warm-white: #fdfcfa;
+            --color-charcoal: #2d2d2d;
+            --color-charcoal-light: #4a4a4a;
+            --color-slate: #6b6b6b;
+            --color-terracotta: #c17f59;
+            --color-red: #e10916;
+            --color-border: #e8e4de;
+            --font-serif: 'Fraunces', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 14px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+
+        ::selection { background: var(--color-terracotta); color: white; }
+
+        /* Header */
+        header {
+            padding: 1.5rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(249, 246, 241, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            text-decoration: none;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a {
+            color: var(--color-slate);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        nav a:hover, nav a.active { color: var(--color-charcoal); }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 10rem 2rem 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-intro {
+            font-size: 1.15rem;
+            color: var(--color-charcoal-light);
+            max-width: 650px;
+            line-height: 1.8;
+        }
+
+        /* Featured Book (Forthcoming) */
+        .featured-section {
+            padding: 0 2rem 5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .featured-book {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 3rem;
+            padding: 2.5rem;
+            background: white;
+            border: 1px solid var(--color-border);
+            position: relative;
+        }
+
+        .featured-label {
+            position: absolute;
+            top: -0.7rem;
+            left: 2rem;
+            background: var(--color-red);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.75rem;
+        }
+
+        .featured-cover {
+            aspect-ratio: 0.65;
+            background: var(--color-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .featured-cover span {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: white;
+            text-align: center;
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .featured-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-subtitle {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            color: var(--color-slate);
+            margin-bottom: 0.75rem;
+        }
+
+        .featured-meta {
+            font-size: 0.85rem;
+            color: var(--color-slate);
+            margin-bottom: 1.25rem;
+        }
+
+        .featured-description {
+            font-size: 0.95rem;
+            color: var(--color-charcoal-light);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-red);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .featured-link:hover {
+            color: var(--color-charcoal);
+        }
+
+        /* Books List */
+        .books-section {
+            padding: 4rem 2rem 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            margin-bottom: 2.5rem;
+        }
+
+        .book-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--color-border);
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .book-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .book-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .book-item:hover .book-cover-small {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .book-item:hover .book-title-link {
+            color: var(--color-terracotta);
+        }
+
+        .book-cover-small {
+            aspect-ratio: 0.65;
+            background: linear-gradient(145deg, #3d3d3d 0%, #2d2d2d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            transition: var(--transition);
+        }
+
+        .book-cover-small span {
+            font-family: var(--font-serif);
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.85);
+            text-align: center;
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .book-cover-small.has-award {
+            position: relative;
+        }
+
+        .book-cover-small .award-dot {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background: var(--color-terracotta);
+            border-radius: 50%;
+        }
+
+        .book-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .book-title-link {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            line-height: 1.3;
+            margin-bottom: 0.4rem;
+            transition: var(--transition);
+        }
+
+        .book-subtitle-small {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            color: var(--color-slate);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-meta-small {
+            font-size: 0.8rem;
+            color: var(--color-slate);
+            margin-bottom: 0.75rem;
+        }
+
+        .book-meta-small span:not(:last-child)::after {
+            content: '·';
+            margin: 0 0.4rem;
+        }
+
+        .book-award {
+            font-size: 0.75rem;
+            color: var(--color-terracotta);
+            font-weight: 500;
+        }
+
+        .book-teaser {
+            font-size: 0.9rem;
+            color: var(--color-charcoal-light);
+            line-height: 1.65;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--color-slate);
+            transition: var(--transition);
+        }
+
+        .book-item:hover .learn-more {
+            color: var(--color-terracotta);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-warm-white);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 0.9rem;
+            color: var(--color-slate);
+        }
+
+        .footer-left a {
+            color: var(--color-slate);
+            text-decoration: none;
+        }
+
+        .footer-left a:hover { color: var(--color-charcoal); }
+
+        .footer-nav { display: flex; gap: 2rem; }
+        .footer-nav a {
+            font-size: 0.85rem;
+            color: var(--color-slate);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .footer-nav a:hover { color: var(--color-charcoal); }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .page-title { font-size: 2.5rem; }
+
+            .featured-book {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .featured-cover {
+                max-width: 180px;
+            }
+
+            .book-item {
+                grid-template-columns: 100px 1fr;
+                gap: 1.25rem;
+            }
+
+            .book-title-link {
+                font-size: 1.15rem;
+            }
+
+            .book-teaser {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-hero {
+                padding-top: 14rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .header-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .bluesky-link {
+            display: flex;
+            align-items: center;
+            color: var(--color-slate);
+            transition: var(--transition);
+        }
+
+        .bluesky-link:hover {
+            color: #0085ff;
+        }
+
+        .bluesky-link svg {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="header-title-row">
+                <a href="index.html" class="site-title">Pepper D. Culpepper</a>
+                <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener" class="bluesky-link" aria-label="Bluesky">
+                <svg viewBox="0 0 600 530" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+            </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html" class="active">Books</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <p class="page-label">Selected Work</p>
+        <h1 class="page-title">Books</h1>
+        <p class="page-intro">
+            My books explore the tension between capitalism and democracy—how corporations shape policy, why some battles become public while others stay hidden, and what this means for governance.
+        </p>
+    </section>
+
+    <section class="featured-section">
+        <div class="featured-book">
+            <span class="featured-label">Forthcoming 2026</span>
+            <div class="featured-cover">
+                <!-- Replace with: <img src="images/billionaire-backlash.jpg" alt="Billionaire Backlash"> -->
+                <span>Billionaire Backlash</span>
+            </div>
+            <div class="featured-info">
+                <h2 class="featured-title">Billionaire Backlash</h2>
+                <p class="featured-subtitle">The Age of Corporate Scandal and How It Could Save Democracy</p>
+                <p class="featured-meta">Bloomsbury · with Taeku Lee</p>
+                <p class="featured-description">
+                    Corporate scandals can change the way the world works—for the better. This book examines when public outrage over corporate malfeasance translates into democratic reform, and why it often doesn't.
+                </p>
+                <a href="billionaire-backlash.html" class="featured-link">Learn more →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="books-section">
+        <h2 class="section-title">Published</h2>
+
+        <a href="quiet-politics.html" class="book-item">
+            <div class="book-cover-small has-award">
+                <span class="award-dot"></span>
+                <!-- Replace with: <img src="images/quiet-politics.jpg" alt="Quiet Politics"> -->
+                <span>Quiet Politics and Business Power</span>
+            </div>
+            <div class="book-info">
+                <h3 class="book-title-link">Quiet Politics and Business Power</h3>
+                <p class="book-subtitle-small">Corporate Control in Europe and Japan</p>
+                <p class="book-meta-small">
+                    <span>Cambridge, 2011</span>
+                </p>
+                <p class="book-award">Winner, Stein Rokkan Prize</p>
+                <p class="book-teaser">Why do corporations get what they want? Business power is greatest when politics is quiet—when decisions happen away from the public eye.</p>
+                <span class="learn-more">Learn more →</span>
+            </div>
+        </a>
+
+        <a href="changing-france.html" class="book-item">
+            <div class="book-cover-small">
+                <!-- Replace with: <img src="images/changing-france.jpg" alt="Changing France"> -->
+                <span>Changing France</span>
+            </div>
+            <div class="book-info">
+                <h3 class="book-title-link">Changing France</h3>
+                <p class="book-subtitle-small">The Politics that Markets Make</p>
+                <p class="book-meta-small">
+                    <span>Palgrave, 2006</span>
+                    <span>with P. Hall & B. Palier</span>
+                </p>
+                <p class="book-teaser">How market pressures have transformed French politics and policy, challenging traditional models of state-led economic management.</p>
+                <span class="learn-more">Learn more →</span>
+            </div>
+        </a>
+
+        <a href="creating-cooperation.html" class="book-item">
+            <div class="book-cover-small">
+                <!-- Replace with: <img src="images/creating-cooperation.jpg" alt="Creating Cooperation"> -->
+                <span>Creating Cooperation</span>
+            </div>
+            <div class="book-info">
+                <h3 class="book-title-link">Creating Cooperation</h3>
+                <p class="book-subtitle-small">How States Develop Human Capital in Europe</p>
+                <p class="book-meta-small">
+                    <span>Cornell, 2003</span>
+                </p>
+                <p class="book-teaser">How do governments convince firms to invest in worker training? The political foundations of vocational education systems across Europe.</p>
+                <span class="learn-more">Learn more →</span>
+            </div>
+        </a>
+
+        <a href="german-skills-machine.html" class="book-item">
+            <div class="book-cover-small">
+                <!-- Replace with: <img src="images/german-skills-machine.jpg" alt="German Skills Machine"> -->
+                <span>The German Skills Machine</span>
+            </div>
+            <div class="book-info">
+                <h3 class="book-title-link">The German Skills Machine</h3>
+                <p class="book-subtitle-small">Sustaining Comparative Advantage in a Global Economy</p>
+                <p class="book-meta-small">
+                    <span>Berghahn, 1999</span>
+                    <span>with D. Finegold</span>
+                </p>
+                <p class="book-teaser">A deep dive into Germany's renowned apprenticeship system and its role in sustaining the country's manufacturing excellence.</p>
+                <span class="learn-more">Learn more →</span>
+            </div>
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <a href="mailto:pepper.culpepper@bsg.ox.ac.uk">pepper.culpepper@bsg.ox.ac.uk</a>
+            </div>
+            <nav class="footer-nav">
+                <a href="books.html">Books</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="media.html">Media</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

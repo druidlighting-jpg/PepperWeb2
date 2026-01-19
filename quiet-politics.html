@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet Politics and Business Power | Pepper D. Culpepper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #f9f6f1;
+            --color-warm-white: #fdfcfa;
+            --color-charcoal: #2d2d2d;
+            --color-charcoal-light: #4a4a4a;
+            --color-slate: #6b6b6b;
+            --color-terracotta: #c17f59;
+            --color-border: #e8e4de;
+            --font-serif: 'Fraunces', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 14px; }
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+        }
+
+        ::selection { background: var(--color-terracotta); color: white; }
+
+        header {
+            padding: 1.5rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(249, 246, 241, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            text-decoration: none;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a {
+            color: var(--color-slate);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        nav a:hover, nav a.active { color: var(--color-charcoal); }
+
+        .book-hero {
+            padding: 10rem 2rem 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .book-hero-inner {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .book-cover {
+            position: sticky;
+            top: 8rem;
+        }
+
+        .book-cover-image {
+            width: 100%;
+            aspect-ratio: 0.65;
+            background: linear-gradient(145deg, #3d3d3d 0%, #2d2d2d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .book-cover-image span {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            font-style: italic;
+            line-height: 1.3;
+        }
+
+        .book-details {
+            padding-top: 1rem;
+        }
+
+        .award-badge {
+            display: inline-block;
+            background: var(--color-terracotta);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            line-height: 1.15;
+            margin-bottom: 0.75rem;
+        }
+
+        .book-subtitle {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--color-slate);
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-meta {
+            font-size: 0.95rem;
+            color: var(--color-slate);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .book-meta span {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .book-description {
+            font-size: 1.1rem;
+            color: var(--color-charcoal-light);
+            line-height: 1.85;
+            margin-bottom: 2.5rem;
+        }
+
+        .book-description p {
+            margin-bottom: 1.5rem;
+        }
+
+        .buy-section {
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .buy-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-slate);
+            margin-bottom: 1rem;
+        }
+
+        .buy-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            padding: 0.9rem 1.75rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--color-charcoal);
+            color: var(--color-charcoal);
+            background: transparent;
+        }
+
+        .buy-btn:hover {
+            background: var(--color-charcoal);
+            color: white;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            color: var(--color-slate);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--color-charcoal);
+        }
+
+        footer {
+            background: var(--color-warm-white);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--color-border);
+            margin-top: 6rem;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 0.9rem;
+            color: var(--color-slate);
+        }
+
+        .footer-left a {
+            color: var(--color-slate);
+            text-decoration: none;
+        }
+
+        .footer-left a:hover { color: var(--color-charcoal); }
+
+        .footer-nav { display: flex; gap: 2rem; }
+        .footer-nav a {
+            font-size: 0.85rem;
+            color: var(--color-slate);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .footer-nav a:hover { color: var(--color-charcoal); }
+
+        @media (max-width: 800px) {
+            .book-hero-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .book-cover {
+                position: static;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            .book-title { font-size: 2.2rem; }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .book-hero {
+                padding-top: 14rem;
+            }
+            .buy-buttons {
+                flex-direction: column;
+            }
+            .buy-btn {
+                text-align: center;
+            }
+            .footer-inner {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            .footer-nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .header-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .bluesky-link {
+            display: flex;
+            align-items: center;
+            color: var(--color-slate);
+            transition: var(--transition);
+        }
+
+        .bluesky-link:hover {
+            color: #0085ff;
+        }
+
+        .bluesky-link svg {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="header-title-row">
+                <a href="index.html" class="site-title">Pepper D. Culpepper</a>
+                <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener" class="bluesky-link" aria-label="Bluesky">
+                <svg viewBox="0 0 600 530" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+                </svg>
+            </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html" class="active">Books</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="book-hero">
+        <a href="books.html" class="back-link">← Back to Books</a>
+        
+        <div class="book-hero-inner">
+            <div class="book-cover">
+                <div class="book-cover-image">
+                    <!-- Replace with: <img src="images/quiet-politics.jpg" alt="Quiet Politics and Business Power"> -->
+                    <span>Quiet Politics and Business Power</span>
+                </div>
+            </div>
+
+            <div class="book-details">
+                <span class="award-badge">Stein Rokkan Prize 2012</span>
+                <h1 class="book-title">Quiet Politics and Business Power</h1>
+                <p class="book-subtitle">Corporate Control in Europe and Japan</p>
+                
+                <div class="book-meta">
+                    <span><strong>Publisher:</strong> Cambridge University Press</span>
+                    <span><strong>Year:</strong> 2011</span>
+                    <span><strong>ISBN:</strong> 978-0521134132</span>
+                </div>
+
+                <div class="book-description">
+                    <p>Why do corporations often get what they want from government? This book argues that business power is greatest when politics is quiet—when issues stay off the public radar and decisions happen in technical committees where lobbyists have the advantage.</p>
+                    <p>Drawing on case studies from France, Germany, Japan, and the Netherlands, the book shows how corporate governance reforms unfold differently depending on whether they attract public attention. When citizens are watching, democracy can push back against business preferences. When they're not, business usually wins.</p>
+                    <p>Winner of the 2012 Stein Rokkan Prize for Comparative Social Science Research, awarded by the European Consortium for Political Research and the University of Bergen.</p>
+                </div>
+
+                <div class="buy-section">
+                    <p class="buy-label">Available at</p>
+                    <div class="buy-buttons">
+                        <a href="https://www.cambridge.org/core/books/quiet-politics-and-business-power/7D8B5E5B5E5B5E5B5E5B5E5B" class="buy-btn">Cambridge UP</a>
+                        <a href="https://www.amazon.com/Quiet-Politics-Business-Power-Corporate/dp/0521134137" class="buy-btn">Amazon</a>
+                        <a href="https://bookshop.org/books/quiet-politics-and-business-power-corporate-control-in-europe-and-japan/9780521134132" class="buy-btn">Bookshop.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <a href="mailto:pepper.culpepper@bsg.ox.ac.uk">pepper.culpepper@bsg.ox.ac.uk</a>
+            </div>
+            <nav class="footer-nav">
+                <a href="books.html">Books</a>
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="media.html">Media</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
