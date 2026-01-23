@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Pepper D. Culpepper</title>
+    <title>Billionaire Backlash | Pepper Culpepper</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
             --color-charcoal-light: #4a4a4a;
             --color-slate: #6b6b6b;
             --color-terracotta: #c17f59;
-            --color-terracotta-dark: #a66b48;
             --color-border: #e8e4de;
             --font-serif: 'Fraunces', Georgia, serif;
             --font-sans: 'Inter', -apple-system, sans-serif;
@@ -29,6 +28,9 @@
             background-color: var(--color-cream);
             color: var(--color-charcoal);
             line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         ::selection {
@@ -83,247 +85,56 @@
             color: var(--color-charcoal);
         }
 
-        /* Page Hero */
-        .page-hero {
-            padding: 10rem 2rem 5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .page-label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-terracotta);
-            margin-bottom: 1rem;
-        }
-
-        .page-title {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            font-weight: 500;
-            color: var(--color-charcoal);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .page-intro {
-            font-size: 1.2rem;
-            color: var(--color-charcoal-light);
-            line-height: 1.8;
-            max-width: 650px;
-        }
-
-        /* Main */
+        /* Main Content */
         main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem 6rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
         }
 
-        /* Central Question */
-        .central-question {
-            padding: 4rem 0;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-            margin-bottom: 4rem;
+        /* Hero Image Container */
+        .hero-image-container {
+            width: 100%;
+            max-width: 2133px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-frame {
+            width: 100%;
+            aspect-ratio: 2133 / 1067;
+            background: var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image-placeholder {
             text-align: center;
+            color: var(--color-slate);
+            padding: 2rem;
         }
 
-        .question-text {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            font-style: italic;
-            font-weight: 400;
-            color: var(--color-terracotta);
-            line-height: 1.4;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Prose Section */
-        .prose {
-            margin-bottom: 4rem;
-        }
-
-        .prose h2 {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--color-charcoal);
-            margin-bottom: 1.5rem;
-        }
-
-        .prose p {
-            font-size: 1.05rem;
-            color: var(--color-charcoal-light);
-            line-height: 1.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .prose p:first-of-type::first-letter {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            float: left;
-            line-height: 1;
-            padding-right: 0.75rem;
-            padding-top: 0.1rem;
-            color: var(--color-charcoal);
-            font-weight: 600;
-        }
-
-        /* Current Project */
-        .current-project {
-            background: var(--color-warm-white);
-            border: 1px solid var(--color-border);
-            padding: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .project-label {
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-terracotta);
-            margin-bottom: 1rem;
-        }
-
-        .project-title {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--color-charcoal);
+        .hero-image-placeholder p {
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
 
-        .project-subtitle {
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--color-slate);
-            margin-bottom: 1.5rem;
-        }
-
-        .project-funding {
+        .hero-image-placeholder span {
             font-size: 0.85rem;
             color: var(--color-slate);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .project-description {
-            font-size: 1rem;
-            color: var(--color-charcoal-light);
-            line-height: 1.85;
-        }
-
-        /* Themes */
-        .themes-section {
-            margin-bottom: 4rem;
-        }
-
-        .themes-section h2 {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--color-charcoal);
-            margin-bottom: 2rem;
-        }
-
-        .theme-list {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .theme-item {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .theme-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .theme-name {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--color-charcoal);
-        }
-
-        .theme-description {
-            font-size: 0.95rem;
-            color: var(--color-charcoal-light);
-            line-height: 1.8;
-        }
-
-        /* Questions */
-        .questions-section {
-            background: var(--color-charcoal);
-            color: white;
-            padding: 4rem 3rem;
-            margin: 4rem -2rem;
-        }
-
-        .questions-section h2 {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .question-list {
-            list-style: none;
-        }
-
-        .question-list li {
-            padding: 1.25rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            font-style: italic;
-            color: rgba(255,255,255,0.85);
-            line-height: 1.5;
-        }
-
-        .question-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* CTA */
-        .cta-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2rem;
-            background: var(--color-warm-white);
-            border: 1px solid var(--color-border);
-            text-decoration: none;
-            transition: var(--transition);
-            margin-top: 4rem;
-        }
-
-        .cta-link:hover {
-            border-color: var(--color-charcoal);
-        }
-
-        .cta-link-text {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            color: var(--color-charcoal);
-        }
-
-        .cta-link-arrow {
-            font-size: 1.5rem;
-            color: var(--color-terracotta);
+            opacity: 0.7;
         }
 
         /* Footer */
@@ -370,15 +181,13 @@
         /* Responsive */
         @media (max-width: 768px) {
             html { font-size: 16px; }
-            .page-title { font-size: 2.5rem; }
-            .theme-item { grid-template-columns: 1fr; gap: 0.75rem; }
-            .questions-section { margin: 3rem -2rem; padding: 3rem 2rem; }
+            main { padding: 7rem 1rem 2rem; }
         }
 
         @media (max-width: 600px) {
             .header-inner { flex-direction: row; gap: 1rem; }
             nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-            .page-hero { padding-top: 14rem; }
+            main { padding: 6rem 1rem 2rem; }
             .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
             .footer-nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
         }
@@ -405,7 +214,7 @@
             height: 18px;
         }
 
-        /* Mobile Menu Button - Simple Approach */
+        /* Mobile Menu Button */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -475,7 +284,7 @@
         <div class="header-inner">
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
             <div class="header-title-row">
-                <a href="index.html" class="site-title">Pepper D. Culpepper</a>
+                <a href="index.html" class="site-title">Pepper Culpepper</a>
                 <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener" class="bluesky-link" aria-label="Bluesky">
                 <svg viewBox="0 0 600 530" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
@@ -485,10 +294,10 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="books.html">Books</a></li>
-                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html" class="active">Billionaire Backlash</a></li>
                     <li><a href="publications.html">Publications</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="books.html">Books</a></li>
                     <li><a href="media.html">Media</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -496,71 +305,12 @@
         </div>
     </header>
 
-    <section class="page-hero">
-        <p class="page-label">What I Study</p>
-        <h1 class="page-title">Research</h1>
-        <p class="page-intro">
-            I study the uncomfortable coexistence of capitalism and democracy—two systems with very different logics that must somehow share the same political space.
-        </p>
-    </section>
-
     <main>
-        <div class="central-question">
-            <p class="question-text">"Does capitalism dominate democracy, or vice versa?"</p>
-        </div>
-
-        <div class="prose">
-            <h2>The Big Picture</h2>
-            <p>My research focuses on what happens when corporate power meets democratic politics. I'm particularly interested in how large companies in finance and technology confront legislative and regulatory challenges—and why those confrontations sometimes become headline news while others remain invisible to voters.</p>
-            <p>The puzzle at the center of my work is this: democratic majorities often want policies that conflict with what powerful businesses prefer. Sometimes the public wins. More often, it doesn't. Understanding when and why matters enormously for the health of democracy.</p>
-        </div>
-
-        <div class="current-project">
-            <p class="project-label">Current Project</p>
-            <h3 class="project-title">Banklash</h3>
-            <p class="project-subtitle">The Feedback Loops of Financial Policymaking</p>
-            <p class="project-funding">European Research Council Advanced Grant · €2.5 million · Five years</p>
-            <p class="project-description">
-                Why did the 2008 financial crisis produce such different policy responses across countries? Banklash investigates the feedback loops connecting policymaking, public opinion, and media coverage. We're testing whether narratives about inequality—stories that frame it as systemic unfairness rather than individual failure—can shift public support for redistribution. Early findings show the United States as a fascinating outlier: American attitudes seem remarkably resistant to these framing effects.
-            </p>
-        </div>
-
-        <div class="themes-section">
-            <h2>Research Themes</h2>
-            <div class="theme-list">
-                <div class="theme-item">
-                    <h3 class="theme-name">Business Power</h3>
-                    <p class="theme-description">How corporations influence policy—not just through lobbying and campaign contributions, but through the "quiet politics" that happens when issues never reach public attention. Business power is often greatest when it's invisible.</p>
-                </div>
-                <div class="theme-item">
-                    <h3 class="theme-name">Financial Regulation</h3>
-                    <p class="theme-description">From the 2008 crisis to cryptocurrency scandals, I study the politics of regulating finance. When do governments impose tough rules? When do they back off? Why does the same crisis produce different responses in different countries?</p>
-                </div>
-                <div class="theme-item">
-                    <h3 class="theme-name">Corporate Governance</h3>
-                    <p class="theme-description">Who controls corporations? Shareholders, managers, stakeholders? I've studied how different countries answer this question—and how those answers have changed over time in Europe and Japan.</p>
-                </div>
-                <div class="theme-item">
-                    <h3 class="theme-name">Media &amp; Opinion</h3>
-                    <p class="theme-description">How does media coverage shape what citizens think about economic policy? When do people pay attention to issues of inequality and corporate power? When do they tune out—and why does that matter?</p>
-                </div>
+        <div class="hero-image-container">
+            <div class="hero-image-frame">
+                <img src="BB_SOCIALS_V2_2.jpg" alt="Billionaire Backlash">
             </div>
         </div>
-
-        <div class="questions-section">
-            <h2>Questions I'm Working On</h2>
-            <ul class="question-list">
-                <li>Under what conditions does public opinion triumph over interest group influence in economic regulation?</li>
-                <li>How do narratives about the causes of inequality influence public support for redistribution?</li>
-                <li>What explains cross-national variation in how governments regulate finance and technology?</li>
-                <li>Why do some policy battles become public fights while others stay confined to technical committees?</li>
-            </ul>
-        </div>
-
-        <a href="publications.html" class="cta-link">
-            <span class="cta-link-text">View my publications →</span>
-            <span class="cta-link-arrow">→</span>
-        </a>
     </main>
 
     <footer>
@@ -569,10 +319,10 @@
                 <a href="mailto:pepper.culpepper@bsg.ox.ac.uk">pepper.culpepper@bsg.ox.ac.uk</a>
             </div>
             <nav class="footer-nav">
-                <a href="books.html">Books</a>
-                <a href="research.html">Research</a>
+                <a href="about.html">About</a>
+                <a href="research.html">Billionaire Backlash</a>
                 <a href="publications.html">Publications</a>
-                <a href="teaching.html">Teaching</a>
+                <a href="books.html">Books</a>
                 <a href="media.html">Media</a>
                 <a href="contact.html">Contact</a>
             </nav>

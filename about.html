@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching | Pepper D. Culpepper</title>
+    <title>About | Pepper D. Culpepper</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -71,14 +71,53 @@
         }
         nav a:hover, nav a.active { color: var(--color-charcoal); }
 
-        /* Page Hero */
-        .page-hero {
-            padding: 10rem 2rem 5rem;
-            max-width: 800px;
-            margin: 0 auto;
+        /* Hero Section
+           To add a background image, replace the background property below with:
+           background: url('your-background-image.jpg') no-repeat center center;
+        */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 13rem 2rem 8rem;
+            position: relative;
+            background: url('nuffield.jpg') no-repeat center center;
+            background-size: cover;
+            background-position: center;
         }
 
-        .page-label {
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(249, 246, 241, 0.45);
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 6rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 580px;
+            order: 2;
+            background: rgba(249, 246, 241, 0.75);
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-image {
+            order: 1;
+        }
+
+        .hero-label {
             font-size: 0.75rem;
             font-weight: 500;
             letter-spacing: 0.15em;
@@ -87,25 +126,88 @@
             margin-bottom: 1rem;
         }
 
-        .page-title {
+        .hero-name {
             font-family: var(--font-serif);
-            font-size: 3.5rem;
-            font-weight: 500;
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1.1;
             color: var(--color-charcoal);
+            letter-spacing: -0.02em;
             margin-bottom: 1.5rem;
         }
 
-        .page-intro {
-            font-size: 1.1rem;
+        .hero-tagline {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--color-terracotta);
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .hero-bio {
+            font-size: 1.05rem;
             color: var(--color-charcoal-light);
-            line-height: 1.8;
+            line-height: 1.85;
+            margin-bottom: 2rem;
+        }
+
+        .hero-affiliation {
+            font-size: 0.9rem;
+            color: var(--color-slate);
+        }
+
+        .hero-affiliation a {
+            color: var(--color-slate);
+            text-decoration: underline;
+            text-decoration-color: var(--color-border);
+            text-underline-offset: 3px;
+            transition: var(--transition);
+        }
+
+        .hero-affiliation a:hover {
+            color: var(--color-charcoal);
+            text-decoration-color: var(--color-terracotta);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image-frame {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: var(--color-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-border) 0%, #d8d4ce 100%);
+            color: var(--color-slate);
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 2rem;
         }
 
         /* Main */
         main {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0 2rem 6rem;
+            padding: 4rem 2rem 6rem;
         }
 
         /* Timeline */
@@ -330,7 +432,19 @@
         /* Responsive */
         @media (max-width: 768px) {
             html { font-size: 16px; }
-            .page-title { font-size: 2.5rem; }
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero-name { font-size: 3rem; }
+            .hero-content {
+                order: 2;
+            }
+            .hero-image {
+                order: 1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
             .education-grid { grid-template-columns: 1fr; gap: 2rem; }
             .teaching-grid { grid-template-columns: 1fr; }
             .supervision-section { padding: 2.5rem 2rem; margin: 0 -2rem 3rem; }
@@ -339,7 +453,9 @@
         @media (max-width: 600px) {
             .header-inner { flex-direction: row; gap: 1rem; }
             nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-            .page-hero { padding-top: 14rem; }
+            .hero { padding-top: 7rem; min-height: auto; }
+            .hero-name { font-size: 2.5rem; }
+            .hero-tagline { font-size: 1.25rem; }
             .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
             .footer-nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
         }
@@ -436,7 +552,7 @@
         <div class="header-inner">
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
             <div class="header-title-row">
-                <a href="index.html" class="site-title">Pepper D. Culpepper</a>
+                <a href="index.html" class="site-title">Pepper Culpepper</a>
                 <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener" class="bluesky-link" aria-label="Bluesky">
                 <svg viewBox="0 0 600 530" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
@@ -446,10 +562,10 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="books.html">Books</a></li>
-                    <li><a href="research.html">Research</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="research.html">Billionaire Backlash</a></li>
                     <li><a href="publications.html">Publications</a></li>
-                    <li><a href="teaching.html" class="active">Teaching</a></li>
+                    <li><a href="books.html">Books</a></li>
                     <li><a href="media.html">Media</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -457,12 +573,31 @@
         </div>
     </header>
 
-    <section class="page-hero">
-        <p class="page-label">Academic Career</p>
-        <h1 class="page-title">Teaching</h1>
-        <p class="page-intro">
-            I've been teaching political economy and public policy for over twenty-five years, at Harvard, the European University Institute, and now Oxford.
-        </p>
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-label">About</p>
+                <h1 class="hero-name">Pepper Culpepper</h1>
+                <p class="hero-tagline">Pepper Culpepper is Vice-Dean for Academic Affairs and Blavatnik Professor of Government and Public Policy at the Blavatnik School of Government. His research explores the intersection between capitalism and democracy.</p>
+                <p class="hero-bio">
+                    His 2026 book with Taeku Lee – The Billionaire Backlash: The Age of Corporate Scandal and How It Could Save Democracy – argues for the positive, and politically popular, role of government regulatory action in an era of populism. The work builds on some of the scholarly insights from his five-year Advanced Grant Project funded by the European Research Council, which sought to understand how big banks and the rules that govern them became objects of political contestation after the Great Financial Crisis of 2008.
+                </p>
+                <p class="hero-bio">
+                    Pepper's 2011 book, Quiet Politics and Business Power was awarded the Stein Rokkan Prize for Comparative Social Science Research. He is the author of Creating Cooperation and co-editor of Changing France (with Peter Hall and Bruno Palier) and The German Skills Machine (with David Finegold). He has published more than twenty peer-reviewed articles.
+                </p>
+                <p class="hero-bio">
+                    His public commentary has appeared in the Conversation, the International Herald Tribune, Le Monde, The New Republic, Times Higher Education, and The Washington Post. A recent article about his research in the Financial Times attracted more than one million Twitter/X views.
+                </p>
+                <p class="hero-affiliation">
+                    Pepper obtained a PhD in political science from Harvard University, a BA from Duke University, where he graduated summa cum laude, and an MLitt from the University of Oxford, where he was a Marshall Scholar. He has previously taught at the Harvard Kennedy School and the European University Institute in Italy. He was an Abe Fellow at the University of Tokyo and has held long-term visiting appointments in France and Germany.
+                </p>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-frame">
+                    <img src="Pepper700by1100.png" alt="Pepper Culpepper">
+                </div>
+            </div>
+        </div>
     </section>
 
     <main>
@@ -517,60 +652,6 @@
             </div>
         </section>
 
-        <section class="teaching-section">
-            <h2 class="section-title">Teaching Areas</h2>
-            <p class="teaching-intro">
-                My teaching focuses on how economic and political systems interact. I teach graduate students heading into policy careers, doctoral students pursuing academic research, and executives seeking to understand the political context of business decisions.
-            </p>
-            <div class="teaching-grid">
-                <div class="teaching-item">
-                    <h3 class="teaching-name">Comparative Political Economy</h3>
-                    <p class="teaching-level">Graduate</p>
-                </div>
-                <div class="teaching-item">
-                    <h3 class="teaching-name">Business &amp; Politics</h3>
-                    <p class="teaching-level">Graduate</p>
-                </div>
-                <div class="teaching-item">
-                    <h3 class="teaching-name">Financial Regulation</h3>
-                    <p class="teaching-level">Graduate</p>
-                </div>
-                <div class="teaching-item">
-                    <h3 class="teaching-name">European Political Economy</h3>
-                    <p class="teaching-level">Graduate</p>
-                </div>
-                <div class="teaching-item">
-                    <h3 class="teaching-name">Policy Analysis</h3>
-                    <p class="teaching-level">Graduate / Executive</p>
-                </div>
-                <div class="teaching-item">
-                    <h3 class="teaching-name">Research Methods</h3>
-                    <p class="teaching-level">Doctoral</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="supervision-section">
-            <h2 class="section-title">Doctoral Supervision</h2>
-            <p class="supervision-text">
-                I supervise doctoral students working on questions at the intersection of business, politics, and economic policy. I'm particularly interested in students pursuing comparative or multi-country research designs.
-            </p>
-            <div class="supervision-areas">
-                <span class="supervision-tag">Business–government relations</span>
-                <span class="supervision-tag">Financial regulation</span>
-                <span class="supervision-tag">Corporate governance</span>
-                <span class="supervision-tag">EU politics</span>
-                <span class="supervision-tag">Technology policy</span>
-                <span class="supervision-tag">Public opinion</span>
-            </div>
-        </section>
-
-        <section class="visiting-section">
-            <h2 class="section-title">International Experience</h2>
-            <p class="visiting-text">
-                Beyond my permanent positions, I've held long-term visiting appointments in France, Germany, and Japan. These experiences have shaped my comparative approach to research—understanding how the same economic pressures produce different political responses in different institutional contexts.
-            </p>
-        </section>
     </main>
 
     <footer>
@@ -579,10 +660,10 @@
                 <a href="mailto:pepper.culpepper@bsg.ox.ac.uk">pepper.culpepper@bsg.ox.ac.uk</a>
             </div>
             <nav class="footer-nav">
-                <a href="books.html">Books</a>
-                <a href="research.html">Research</a>
+                <a href="about.html">About</a>
+                <a href="research.html">Billionaire Backlash</a>
                 <a href="publications.html">Publications</a>
-                <a href="teaching.html">Teaching</a>
+                <a href="books.html">Books</a>
                 <a href="media.html">Media</a>
                 <a href="contact.html">Contact</a>
             </nav>
