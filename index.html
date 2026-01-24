@@ -55,13 +55,29 @@
             padding: 1.2rem 2rem 0.9rem;
             position: fixed;
             width: 100%;
-            top: 4.5rem;
+            top: 5rem;
             z-index: 999;
             animation: slideDown 0.5s ease-out;
             text-decoration: none;
             display: block;
             cursor: pointer;
             transition: background 0.2s ease;
+        }
+
+        .announcement-bar-image {
+            padding: 0;
+            display: block;
+        }
+
+        .announcement-bar-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            image-rendering: auto;
+        }
+
+        .announcement-bar {
+            display: none;
         }
 
         .announcement-bar:hover {
@@ -443,6 +459,52 @@
             margin-bottom: 0;
         }
 
+        .book-buy-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-charcoal);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .book-buy-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .book-buy-links a {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            background: #d4654a;
+            box-shadow: 0 4px 12px rgba(196, 90, 63, 0.35);
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .book-buy-links a:hover {
+            background: #e07058;
+            box-shadow: 0 6px 20px rgba(196, 90, 63, 0.45);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .book-buy-links a:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(196, 90, 63, 0.35);
+        }
+
         @media (max-width: 768px) {
             .book-image-placeholder {
                 margin: 0 auto 2rem;
@@ -450,6 +512,16 @@
 
             .book-title {
                 font-size: 1.5rem;
+            }
+
+            .book-buy-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .book-buy-links a {
+                text-align: center;
+                padding: 1rem 1.5rem;
             }
         }
 
@@ -623,6 +695,7 @@
             }
 
             .announcement-bar {
+                display: block;
                 transition: transform 0.3s ease;
             }
 
@@ -682,12 +755,19 @@
     </style>
 </head>
 <body>
+    <!-- Original text banner (commented out for revert)
     <a href="billionaire-backlash.html" class="announcement-bar">
         <div class="announcement-inner">
-            <span class="announcement-badge">Coming 2026</span>
-            <span class="announcement-text"><strong>Billionaire Backlash</strong> — The Age of Corporate Scandal and How It Could Save Democracy</span>
-            <span class="announcement-link">Learn more →</span>
+            <span class="announcement-badge">New Release</span>
+            <span class="announcement-text"><strong>Billionaire Backlash</strong> � The Age of Corporate Scandal and How It Could Save Democracy</span>
+            <span class="announcement-link">Learn more ?</span>
         </div>
+    </a>
+    -->
+
+    <!-- Image banner -->
+    <a href="billionaire-backlash.html" class="announcement-bar announcement-bar-image">
+        <img src="BB_XBANNER_V2_6.jpg" alt="Billionaire Backlash - New Release">
     </a>
 
     <header id="header">
@@ -744,7 +824,7 @@
                 </div>
             </div>
             <div class="book-content">
-                <p class="book-release">Upcoming Release: January 2026</p>
+                <p class="book-release">Now Available: January 2026</p>
                 <h2 class="book-title">Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy</h2>
                 <p class="book-publisher">Bloomsbury  2026</p>
                 <div class="book-description">
@@ -753,6 +833,12 @@
                     <p>Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.</p>
                     <p>Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.</p>
                     <p>Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.</p>
+                </div>
+                <p class="book-buy-label">Buy on:</p>
+                <div class="book-buy-links">
+                    <a href="https://www.amazon.com" target="_blank" rel="noopener">Amazon</a>
+                    <a href="https://bookshop.org" target="_blank" rel="noopener">Bookshop.org</a>
+                    <a href="https://www.bloomsbury.com" target="_blank" rel="noopener">Bloomsbury</a>
                 </div>
             </div>
         </div>
@@ -814,15 +900,15 @@
                 });
             });
         }
-                // Hide announcement bar on scroll (mobile only)
-        if (window.innerWidth <= 600) {
+                // Hide announcement bar on scroll
+        {
             let lastScroll = 0;
             const announcementBar = document.querySelector('.announcement-bar');
 
             window.addEventListener('scroll', () => {
                 const currentScroll = window.pageYOffset;
 
-                if (currentScroll > 100 && currentScroll > lastScroll) {
+                if (currentScroll > 20 && currentScroll > lastScroll) {
                     // Scrolling down
                     announcementBar.classList.add('hidden');
                 } else if (currentScroll < lastScroll) {
