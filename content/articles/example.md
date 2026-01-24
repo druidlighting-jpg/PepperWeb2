@@ -1,0 +1,7 @@
+---
+title: "Example Article Title"
+date: 2026-01-15T12:00:00.000Z
+source: "Publication Name"
+link: "https://example.com/article"
+excerpt: ""
+---

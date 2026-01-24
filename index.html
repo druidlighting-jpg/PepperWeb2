@@ -525,6 +525,92 @@
             }
         }
 
+        /* Recent Content Sections */
+        .content-columns {
+            padding: 4rem 2rem;
+            background: var(--color-cream);
+            border-top: 1px solid var(--color-border);
+        }
+
+        .content-columns-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .content-column {
+            background: var(--color-warm-white);
+            padding: 2rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .content-column-header {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .content-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .content-item:last-child {
+            border-bottom: none;
+        }
+
+        .content-item-date {
+            font-size: 0.75rem;
+            color: var(--color-slate);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-item-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            margin-bottom: 0.35rem;
+            line-height: 1.4;
+        }
+
+        .content-item-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .content-item-title a:hover {
+            color: var(--color-terracotta);
+        }
+
+        .content-item-source {
+            font-size: 0.85rem;
+            color: var(--color-slate);
+            font-style: italic;
+        }
+
+        .content-item-excerpt {
+            font-size: 0.9rem;
+            color: var(--color-charcoal-light);
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-columns-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
         /* Contact CTA */
         .cta-section {
             background: var(--color-cream);
@@ -844,6 +930,61 @@
         </div>
     </section>
 
+    <!-- Recent Content Sections -->
+    <section class="content-columns">
+        <div class="content-columns-inner">
+            <!-- Left Column: Recent/Selected Articles -->
+            <div class="content-column" id="recent-articles">
+                <h2 class="content-column-header">Recent Articles</h2>
+                
+                <!-- CMS Content Area: Articles -->
+                <div class="content-item">
+                    <p class="content-item-date">January 2026</p>
+                    <h3 class="content-item-title"><a href="#">Article Title Goes Here</a></h3>
+                    <p class="content-item-source">Publication Name</p>
+                </div>
+                
+                <div class="content-item">
+                    <p class="content-item-date">December 2025</p>
+                    <h3 class="content-item-title"><a href="#">Another Article Title</a></h3>
+                    <p class="content-item-source">Publication Name</p>
+                </div>
+                
+                <div class="content-item">
+                    <p class="content-item-date">November 2025</p>
+                    <h3 class="content-item-title"><a href="#">Third Article Title</a></h3>
+                    <p class="content-item-source">Publication Name</p>
+                </div>
+                <!-- End CMS Content Area -->
+            </div>
+
+            <!-- Right Column: Media & Book Reviews -->
+            <div class="content-column" id="media-reviews">
+                <h2 class="content-column-header">Media & Book Reviews</h2>
+                
+                <!-- CMS Content Area: Media/Reviews -->
+                <div class="content-item">
+                    <p class="content-item-date">January 2026</p>
+                    <h3 class="content-item-title"><a href="#">Review or Media Appearance Title</a></h3>
+                    <p class="content-item-source">Media Outlet</p>
+                </div>
+                
+                <div class="content-item">
+                    <p class="content-item-date">January 2026</p>
+                    <h3 class="content-item-title"><a href="#">Another Review Title</a></h3>
+                    <p class="content-item-source">Media Outlet</p>
+                </div>
+                
+                <div class="content-item">
+                    <p class="content-item-date">December 2025</p>
+                    <h3 class="content-item-title"><a href="#">Third Review Title</a></h3>
+                    <p class="content-item-source">Media Outlet</p>
+                </div>
+                <!-- End CMS Content Area -->
+            </div>
+        </div>
+    </section>
+
 
     <section class="cta-section">
         <div class="cta-inner">
@@ -911,7 +1052,7 @@
                 if (currentScroll > 20 && currentScroll > lastScroll) {
                     // Scrolling down
                     announcementBar.classList.add('hidden');
-                } else if (currentScroll < lastScroll) {
+                } else if (currentScroll < lastScroll - 50) {
                     // Scrolling up
                     announcementBar.classList.remove('hidden');
                 }
@@ -920,5 +1061,6 @@
             });
         }
     </script>
+    <script src="js/content-loader.js"></script>
 </body>
 
