@@ -368,241 +368,88 @@
             color: var(--color-charcoal);
         }
 
-        /* Books Section - Single Book Carousel */
-        .books-section {
-            padding: 4rem 0;
-            background: var(--color-cream);
+
+        /* Billionaire Backlash Section */
+        .book-section {
+            background: var(--color-warm-white);
+            border-top: 1px solid var(--color-border);
+            padding: 5rem 2rem;
         }
 
-        .books-header {
+        .book-inner {
             max-width: 900px;
             margin: 0 auto;
-            padding: 0 2rem 1.5rem;
-        }
-
-        .books-carousel {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .books-carousel-inner {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .carousel-btn {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            border: 1px solid var(--color-border-dark);
-            background: var(--color-warm-white);
-            color: var(--color-charcoal);
-            font-size: 1.25rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-btn:hover {
-            background: var(--color-charcoal);
-            color: white;
-            border-color: var(--color-charcoal);
-        }
-
-        .carousel-btn:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        .carousel-btn:disabled:hover {
-            background: var(--color-warm-white);
-            color: var(--color-charcoal);
-            border-color: var(--color-border-dark);
-        }
-
-        .books-viewport {
-            flex: 1;
-            overflow: hidden;
-            min-width: 0;
-        }
-
-        .books-track {
-            display: flex;
-            transition: transform 0.4s ease;
-        }
-
-        .book-slide {
-            flex: 0 0 100%;
-            min-width: 0;
-            display: flex;
-            gap: 3rem;
-            align-items: flex-start;
-            padding: 1rem;
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .book-slide:hover .book-cover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .book-slide:hover .book-title {
-            color: var(--color-terracotta);
-        }
-
-        .book-cover {
-            flex-shrink: 0;
-            width: 200px;
-            aspect-ratio: 0.65;
-            background: #e0dcd5;
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .book-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .book-cover-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            background: linear-gradient(145deg, #3d3d3d 0%, #2d2d2d 100%);
-        }
-
-        .book-cover-placeholder span {
-            font-family: var(--font-serif);
-            font-size: 1rem;
-            color: rgba(255,255,255,0.85);
             text-align: center;
-            font-style: italic;
-            line-height: 1.4;
         }
 
-        .book-award-badge {
-            position: absolute;
-            top: 0.75rem;
-            right: 0.75rem;
-            background: var(--color-terracotta);
-            color: white;
-            font-size: 0.55rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
+        .book-image-container {
+            position: relative;
+        }
+
+        .book-image-placeholder {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .book-image-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .book-content {
+            text-align: left;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .book-release {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            padding: 0.25rem 0.4rem;
-        }
-
-        .book-info {
-            flex: 1;
-            padding: 1rem 0;
+            color: var(--color-terracotta);
+            margin-bottom: 1rem;
         }
 
         .book-title {
             font-family: var(--font-serif);
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-weight: 500;
-            font-style: italic;
             color: var(--color-charcoal);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
             line-height: 1.3;
-            margin-bottom: 0.5rem;
-            transition: var(--transition);
         }
 
         .book-publisher {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--color-slate);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .book-description {
             font-size: 1rem;
             color: var(--color-charcoal-light);
-            line-height: 1.75;
+            line-height: 1.85;
         }
 
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 2rem;
+        .book-description p {
+            margin-bottom: 1.25rem;
         }
 
-        .carousel-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--color-border-dark);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
+        .book-description p:last-child {
+            margin-bottom: 0;
         }
 
-        .carousel-dot.active {
-            background: var(--color-charcoal);
-        }
-
-        .carousel-dot:hover {
-            background: var(--color-slate);
-        }
-
-        .books-link {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem 2rem 0;
-        }
-
-        .books-link a {
-            font-size: 0.9rem;
-            color: var(--color-charcoal);
-            text-decoration: none;
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 0.2rem;
-            transition: var(--transition);
-        }
-
-        .books-link a:hover {
-            border-bottom-color: var(--color-terracotta);
-        }
-
-        @media (max-width: 700px) {
-            .book-slide {
-            .books-carousel {
-                padding: 0 1rem;
+        @media (max-width: 768px) {
+            .book-image-placeholder {
+                margin: 0 auto 2rem;
             }
-            .book-slide {
-                padding: 0.5rem;
-            }
-            .book-info {
-                max-width: 100%;
-            }
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 1.5rem;
-            }
-            .book-cover {
-                width: 160px;
-            }
+
             .book-title {
-                font-size: 1.4rem;
-            }
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -712,19 +559,6 @@
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
-            }
-
-            .featured-book {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .book-cover {
-                max-width: 180px;
-            }
-
-            .other-books {
-                grid-template-columns: 1fr;
             }
 
             .commentary-grid {
@@ -901,133 +735,29 @@
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="section-inner">
-            <div class="about-content">
-                <div class="about-text">
-                    <p>My research sits at the intersection of capitalism and democracy—two systems that coexist uneasily. I'm particularly interested in how large companies in finance and technology navigate regulatory challenges, and why some battles over economic policy become front-page news while others remain invisible to voters.</p>
-                    <p>Before Oxford, I spent eleven years at Harvard's Kennedy School and seven years at the European University Institute in Florence. I've held visiting positions in France, Germany, and Japan, and I was a Marshall Scholar at Oxford decades before returning to teach here.</p>
+    <!-- Billionaire Backlash Section -->
+    <section class="book-section" id="billionaire-backlash">
+        <div class="book-inner">
+            <div class="book-image-container">
+                <div class="book-image-placeholder">
+                    <img src="BB_SOCIALS_V2_2.jpg" alt="Billionaire Backlash book cover">
                 </div>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <p class="highlight-label">Current Project</p>
-                        <p class="highlight-value">Banklash — a €2.5M ERC study of public opinion and financial policymaking</p>
-                    </div>
-                    <div class="highlight-item">
-                        <p class="highlight-label">Research Areas</p>
-                        <p class="highlight-value">Business &amp; politics, financial regulation, comparative political economy</p>
-                    </div>
-                    <div class="highlight-item">
-                        <p class="highlight-label">Education</p>
-                        <p class="highlight-value">Ph.D., Harvard · M.Litt., Oxford · B.A., Duke</p>
-                    </div>
+            </div>
+            <div class="book-content">
+                <p class="book-release">Upcoming Release: January 2026</p>
+                <h2 class="book-title">Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy</h2>
+                <p class="book-publisher">Bloomsbury  2026</p>
+                <div class="book-description">
+                    <p>The surprising story of how corporate scandals from Enron to the Facebook privacy scandal change the way the world works for the better.</p>
+                    <p>Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals dont simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.</p>
+                    <p>Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.</p>
+                    <p>Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.</p>
+                    <p>Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="books-section">
-        <div class="books-header">
-            <p class="section-label">Selected Work</p>
-            <h2 class="section-title">Books</h2>
-        </div>
-
-        <div class="books-carousel">
-            <div class="books-carousel-inner">
-                <button class="carousel-btn carousel-prev" aria-label="Previous book">←</button>
-                
-                <div class="books-viewport">
-                    <div class="books-track">
-                        <a href="billionaire-backlash.html" class="book-slide">
-                            <div class="book-cover" style="background: #e10916;">
-                                <span class="book-award-badge" style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3);">2026</span>
-                                <!-- Replace with: <img src="images/billionaire-backlash.jpg" alt="Billionaire Backlash"> -->
-                                <div class="book-cover-placeholder" style="background: transparent;">
-                                    <span style="color: white;">Billionaire Backlash</span>
-                                </div>
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Billionaire Backlash</h3>
-                                <p class="book-publisher">Bloomsbury, 2026 · with Taeku Lee</p>
-                                <p class="book-description">Corporate scandals can change the way the world works—for the better. This book examines when public outrage translates into democratic reform.</p>
-                            </div>
-                        </a>
-
-                        <a href="quiet-politics.html" class="book-slide">
-                            <div class="book-cover">
-                                <span class="book-award-badge">Award</span>
-                                <!-- Replace with: <img src="images/quiet-politics.jpg" alt="Quiet Politics and Business Power"> -->
-                                <div class="book-cover-placeholder">
-                                    <span>Quiet Politics and Business Power</span>
-                                </div>
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Quiet Politics and Business Power</h3>
-                                <p class="book-publisher">Cambridge University Press, 2011</p>
-                                <p class="book-description">Why do corporations often get what they want from government? This book argues that business power is greatest when politics is quiet—when issues stay off the public radar.</p>
-                            </div>
-                        </a>
-
-                        <a href="changing-france.html" class="book-slide">
-                            <div class="book-cover">
-                                <!-- Replace with: <img src="images/changing-france.jpg" alt="Changing France"> -->
-                                <div class="book-cover-placeholder">
-                                    <span>Changing France</span>
-                                </div>
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Changing France: The Politics that Markets Make</h3>
-                                <p class="book-publisher">Palgrave Macmillan, 2006 · with P. Hall & B. Palier</p>
-                                <p class="book-description">An examination of how market pressures have transformed French politics and policy, challenging traditional models of state-led economic management.</p>
-                            </div>
-                        </a>
-
-                        <a href="creating-cooperation.html" class="book-slide">
-                            <div class="book-cover">
-                                <!-- Replace with: <img src="images/creating-cooperation.jpg" alt="Creating Cooperation"> -->
-                                <div class="book-cover-placeholder">
-                                    <span>Creating Cooperation</span>
-                                </div>
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">Creating Cooperation: How States Develop Human Capital in Europe</h3>
-                                <p class="book-publisher">Cornell University Press, 2003</p>
-                                <p class="book-description">How do governments convince firms to invest in worker training? This book explores the political foundations of vocational education systems across Europe.</p>
-                            </div>
-                        </a>
-
-                        <a href="german-skills-machine.html" class="book-slide">
-                            <div class="book-cover">
-                                <!-- Replace with: <img src="images/german-skills-machine.jpg" alt="The German Skills Machine"> -->
-                                <div class="book-cover-placeholder">
-                                    <span>The German Skills Machine</span>
-                                </div>
-                            </div>
-                            <div class="book-info">
-                                <h3 class="book-title">The German Skills Machine</h3>
-                                <p class="book-publisher">Berghahn Books, 1999 · with D. Finegold</p>
-                                <p class="book-description">A deep dive into Germany's renowned apprenticeship system and its role in sustaining the country's manufacturing excellence.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <button class="carousel-btn carousel-next" aria-label="Next book">→</button>
-            </div>
-
-            <div class="carousel-dots">
-                <button class="carousel-dot active" data-index="0" aria-label="Book 1"></button>
-                <button class="carousel-dot" data-index="1" aria-label="Book 2"></button>
-                <button class="carousel-dot" data-index="2" aria-label="Book 3"></button>
-                <button class="carousel-dot" data-index="3" aria-label="Book 4"></button>
-                <button class="carousel-dot" data-index="4" aria-label="Book 5"></button>
-            </div>
-        </div>
-
-        <div class="books-link">
-            <a href="books.html">View all books →</a>
-        </div>
-    </section>
 
     <section class="cta-section">
         <div class="cta-inner">
@@ -1084,55 +814,7 @@
                 });
             });
         }
-
-        // Books carousel
-        const track = document.querySelector('.books-track');
-        const slides = document.querySelectorAll('.book-slide');
-        const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
-        const dots = document.querySelectorAll('.carousel-dot');
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-            // Update dots
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
-            });
-
-            // Update button states
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex === totalSlides - 1;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < totalSlides - 1) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        dots.forEach((dot, i) => {
-            dot.addEventListener('click', () => {
-                currentIndex = i;
-                updateCarousel();
-            });
-        });
-
-        // Initialize
-        updateCarousel();
-    </script>
-    <script>
-        // Hide announcement bar on scroll (mobile only)
+                // Hide announcement bar on scroll (mobile only)
         if (window.innerWidth <= 600) {
             let lastScroll = 0;
             const announcementBar = document.querySelector('.announcement-bar');
