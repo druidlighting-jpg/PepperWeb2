@@ -3,7 +3,8 @@ async function loadContent() {
     // Load Articles
     try {
         const articlesRes = await fetch('content/articles.json');
-        const articles = await articlesRes.json();
+        const articlesData = await articlesRes.json();
+        const articles = articlesData.items || [];
         const articlesContainer = document.querySelector('#recent-articles');
 
         if (articlesContainer && articles.length > 0) {
@@ -34,7 +35,8 @@ async function loadContent() {
     // Load Media & Reviews
     try {
         const mediaRes = await fetch('content/media.json');
-        const media = await mediaRes.json();
+        const mediaData = await mediaRes.json();
+        const media = mediaData.items || [];
         const mediaContainer = document.querySelector('#media-reviews');
 
         if (mediaContainer && media.length > 0) {

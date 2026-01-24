@@ -8,25 +8,31 @@ public_folder: "/uploads"
 collections:
   - name: "articles"
     label: "Recent Articles"
-    folder: "content/articles"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    file: "content/articles.json"
+    format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publication Date", name: "date", widget: "datetime" }
-      - { label: "Publication/Source", name: "source", widget: "string" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Excerpt (optional)", name: "excerpt", widget: "text", required: false }
+      - label: "Articles"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publication Date", name: "date", widget: "datetime" }
+          - { label: "Publication/Source", name: "source", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Excerpt (optional)", name: "excerpt", widget: "text", required: false }
 
   - name: "media"
     label: "Media & Book Reviews"
-    folder: "content/media"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    file: "content/media.json"
+    format: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Media Outlet/Source", name: "source", widget: "string" }
-      - { label: "Link", name: "link", widget: "string" }
-      - { label: "Type", name: "type", widget: "select", options: ["Review", "Interview", "Podcast", "TV/Video", "Other"] }
-      - { label: "Excerpt (optional)", name: "excerpt", widget: "text", required: false }
+      - label: "Media Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Media Outlet/Source", name: "source", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Type", name: "type", widget: "select", options: ["Review", "Interview", "Podcast", "TV/Video", "Other"] }
+          - { label: "Excerpt (optional)", name: "excerpt", widget: "text", required: false }
