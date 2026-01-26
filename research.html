@@ -97,7 +97,7 @@
         /* Hero Image Container */
         .hero-image-container {
             width: 100%;
-            max-width: 2133px;
+            max-width: 1000px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -135,6 +135,61 @@
             font-size: 0.85rem;
             color: var(--color-slate);
             opacity: 0.7;
+        }
+
+        /* Book Content Section */
+        .book-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .book-content h1 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-content .book-meta {
+            font-size: 1rem;
+            color: var(--color-slate);
+            margin-bottom: 2rem;
+        }
+
+        .book-content .tagline {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--color-terracotta);
+        }
+
+        .book-content .intro {
+            font-size: 1.15rem;
+            color: var(--color-charcoal);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .book-content p {
+            font-size: 1.05rem;
+            color: var(--color-charcoal-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.85;
+        }
+
+        .book-content .conclusion {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--color-charcoal);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
         }
 
         /* Footer */
@@ -181,13 +236,34 @@
         /* Responsive */
         @media (max-width: 768px) {
             html { font-size: 16px; }
-            main { padding: 7rem 1rem 2rem; }
+            main { padding: 7rem 1rem 1rem; }
+            .book-content { padding-top: 2rem; }
         }
 
         @media (max-width: 600px) {
             .header-inner { flex-direction: row; gap: 1rem; }
             nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-            main { padding: 6rem 1rem 2rem; }
+            main { padding: 6rem 1rem 0.5rem; }
+            .book-content {
+                padding-top: 1.5rem;
+                text-align: center;
+            }
+            .book-content h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+            .book-content .book-meta {
+                font-size: 0.85rem;
+            }
+            .book-content .tagline {
+                text-align: left;
+                font-size: 1.2rem;
+            }
+            .book-content .intro,
+            .book-content p,
+            .book-content .conclusion {
+                text-align: left;
+            }
             .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
             .footer-nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
         }
@@ -312,6 +388,25 @@
             </div>
         </div>
     </main>
+
+    <section class="book-content">
+        <h1>Billionaire Backlash</h1>
+        <p class="book-meta">Pepper Culpepper & Taeku Lee • Bloomsbury • January 2026</p>
+
+        <p class="tagline">The age of corporate scandal — and how it could save democracy.</p>
+
+        <p class="intro">The surprising story of how corporate scandals - from Enron to the Facebook privacy scandal - change the way the world works for the better.</p>
+
+        <p>Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals don't simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.</p>
+
+        <p>Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.</p>
+
+        <p>Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea - the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.</p>
+
+        <p>Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.</p>
+
+        <p class="conclusion">From Enron to Cambridge Analytica, they argue that corporate scandals aren't just symptoms of elite impunity: under the right conditions, they can become rare moments when citizens regain leverage over powerful firms and revive democratic accountability.</p>
+    </section>
 
     <footer>
         <div class="footer-inner">
