@@ -140,6 +140,24 @@
             flex-direction: column;
         }
 
+        /* Clickable card link wrapper */
+        a.book-card-link {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        a.book-card-link:hover .book-cover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        a.book-card-link:hover .book-title {
+            color: var(--color-terracotta);
+        }
+
         .book-cover {
             width: 100%;
             aspect-ratio: 0.65;
@@ -148,6 +166,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: var(--transition);
         }
 
         .book-cover img {
@@ -515,183 +534,363 @@
 
     <section class="page-hero">
         <p class="page-label">Bibliography</p>
-        <h1 class="page-title">Books</h1>
+        <h1 class="page-title">Articles</h1>
         <p class="page-intro">
-            Monographs and edited volumes on comparative political economy, business power, and the politics of financial regulation.
+            Peer-reviewed articles on comparative political economy, business power, and the politics of financial regulation.
         </p>
     </section>
 
     <main>
-        <section id="books" class="pub-section">
+        <section id="articles" class="pub-section">
             <div class="section-header">
-                <h2 class="section-title">Authored</h2>
+                <h2 class="section-title">Journal Articles</h2>
             </div>
 
             <div class="books-grid">
-                <div class="book-card">
+                <a href="https://scholar.google.com/scholar?q=In+the+Metaverse+Politicians+Can+Hear+You+Scream+Culpepper" target="_blank" rel="noopener" class="book-card-link">
                     <div class="book-cover">
-                        <!-- Replace with: <img src="images/billionaire-backlash.jpg" alt="Billionaire Backlash"> -->
                         <div class="book-cover-placeholder">
-                            <span>Billionaire Backlash</span>
+                            <span>In the Metaverse, Politicians Can Hear You Scream</span>
                         </div>
                     </div>
-                    <span class="forthcoming-label">New Release</span>
-                    <h3 class="book-title">Billionaire Backlash</h3>
+                    <span class="forthcoming-label">Forthcoming</span>
+                    <h3 class="book-title">In the Metaverse, Politicians Can Hear You Scream</h3>
                     <p class="book-meta">
-                        <span class="publisher">Bloomsbury</span>
-                        <span class="coauthors">With Taeku Lee</span>
+                        <span class="publisher">Perspectives on Politics, 2026</span>
+                        <span class="coauthors">with Lucas Stanczyk & Taeku Lee</span>
                     </p>
-                </div>
+                </a>
 
-                <div class="book-card">
+                <a href="https://scholar.google.com/scholar?q=Media+Effects+Revisited+Corporate+Scandals+Culpepper" target="_blank" rel="noopener" class="book-card-link">
                     <div class="book-cover">
-                        <!-- Replace with: <img src="images/quiet-politics.jpg" alt="Quiet Politics and Business Power"> -->
                         <div class="book-cover-placeholder">
-                            <span>Quiet Politics and Business Power</span>
+                            <span>Media Effects Revisited</span>
                         </div>
                     </div>
-                    <h3 class="book-title">Quiet Politics and Business Power</h3>
-                    <p class="book-subtitle">Corporate Control in Europe and Japan</p>
+                    <h3 class="book-title">Media Effects Revisited</h3>
+                    <p class="book-subtitle">Corporate Scandals and Popular Attitudes Toward Business</p>
                     <p class="book-meta">
-                        <span class="publisher">Cambridge University Press, 2011</span>
+                        <span class="publisher">Political Science Research and Methods 14(1), 2026</span>
+                        <span class="coauthors">with Taeku Lee</span>
                     </p>
-                    <span class="book-award">Stein Rokkan Prize 2012</span>
-                </div>
+                </a>
 
-                <div class="book-card">
+                <a href="https://scholar.google.com/scholar?q=%22The+Economy+is+Rigged%22+Culpepper+Lee" target="_blank" rel="noopener" class="book-card-link">
                     <div class="book-cover">
-                        <!-- Replace with: <img src="images/creating-cooperation.jpg" alt="Creating Cooperation"> -->
                         <div class="book-cover-placeholder">
-                            <span>Creating Cooperation</span>
+                            <span>"The Economy is Rigged"</span>
                         </div>
                     </div>
-                    <h3 class="book-title">Creating Cooperation</h3>
-                    <p class="book-subtitle">How States Develop Human Capital in Europe</p>
+                    <h3 class="book-title">"The Economy is Rigged"</h3>
+                    <p class="book-subtitle">Support for Economic Policies on the Left and the Right</p>
                     <p class="book-meta">
-                        <span class="publisher">Cornell University Press, 2003</span>
+                        <span class="publisher">Comparative Political Studies 58(4), 2025</span>
+                        <span class="coauthors">with Taeku Lee</span>
                     </p>
-                </div>
-            </div>
-        </section>
+                </a>
 
-        <section id="edited" class="pub-section">
-            <div class="section-header">
-                <h2 class="section-title">Edited Volumes</h2>
-            </div>
-
-            <div class="books-grid">
-                <div class="book-card">
+                <a href="https://scholar.google.com/scholar?q=Wage-Setting+Powers+Monopsonistic+Employers+Culpepper" target="_blank" rel="noopener" class="book-card-link">
                     <div class="book-cover">
-                        <!-- Replace with: <img src="images/changing-france.jpg" alt="Changing France"> -->
                         <div class="book-cover-placeholder">
-                            <span>Changing France</span>
+                            <span>The Wage-Setting Powers of Monopsonistic Employers</span>
                         </div>
                     </div>
-                    <h3 class="book-title">Changing France</h3>
-                    <p class="book-subtitle">The Politics that Markets Make</p>
+                    <h3 class="book-title">The Wage-Setting Powers of Monopsonistic Employers</h3>
                     <p class="book-meta">
-                        <span class="publisher">Palgrave Macmillan, 2006</span>
-                        <span class="coauthors">With Peter A. Hall &amp; Bruno Palier</span>
+                        <span class="publisher">Socio-Economic Review 22(3), 2024</span>
+                        <span class="coauthors">with Sydney Collin Caldera</span>
                     </p>
-                </div>
+                </a>
 
-                <div class="book-card">
+                <a href="https://scholar.google.com/scholar?q=Backlash+and+the+Quiet+Salience+Culpepper" target="_blank" rel="noopener" class="book-card-link">
                     <div class="book-cover">
-                        <!-- Replace with: <img src="images/german-skills-machine.jpg" alt="The German Skills Machine"> -->
                         <div class="book-cover-placeholder">
-                            <span>The German Skills Machine</span>
+                            <span>The Backlash and the Quiet</span>
                         </div>
                     </div>
-                    <h3 class="book-title">The German Skills Machine</h3>
-                    <p class="book-subtitle">Sustaining Comparative Advantage in a Global Economy</p>
+                    <h3 class="book-title">The Backlash and the Quiet</h3>
+                    <p class="book-subtitle">When and Why Salience Helps Diffuse Policy Interests</p>
                     <p class="book-meta">
-                        <span class="publisher">Berghahn Books, 1999</span>
-                        <span class="coauthors">With David Finegold</span>
+                        <span class="publisher">Perspectives on Politics 21(4), 2023</span>
                     </p>
-                </div>
-            </div>
-        </section>
+                </a>
 
-        <section id="articles" class="articles-section">
-            <div class="articles-inner">
-                <div class="section-header">
-                    <h2 class="section-title">Selected Articles</h2>
-                </div>
-
-                <div class="articles-grid">
-                    <div class="article-item">
-                        <h3 class="article-title">Structural Power and Public Policy</h3>
-                        <p class="article-journal">International Organization</p>
+                <a href="https://scholar.google.com/scholar?q=Do+People+Want+Companies+Political+Views+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Do People Want Companies to Have Political Views?</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">Do People Want Companies to Have Political Views?</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Business & Politics 24(3), 2022</span>
+                        <span class="coauthors">with Taeku Lee</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">The Political Origins of Financial Supervision</h3>
-                        <p class="article-journal">Comparative Political Studies</p>
+                <a href="https://scholar.google.com/scholar?q=Narrowing+Corporate+Purpose+Public+Attitudes+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>The Narrowing of Corporate Purpose</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">The Narrowing of Corporate Purpose</h3>
+                    <p class="book-subtitle">Public Attitudes to the Breadth of Corporate Obligations</p>
+                    <p class="book-meta">
+                        <span class="publisher">Business and Politics 24(1), 2022</span>
+                        <span class="coauthors">with Niccolo Durazzi</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">Quiet Politics in Tumultuous Times</h3>
-                        <p class="article-journal">Politics &amp; Society</p>
+                <a href="https://scholar.google.com/scholar?q=Narrowing+National+Mind+Foreign+Ownership+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>The Narrowing of the National Mind</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">The Narrowing of the National Mind</h3>
+                    <p class="book-subtitle">Foreign Ownership, Immigration, and Public Reaction Against Economic Openness</p>
+                    <p class="book-meta">
+                        <span class="publisher">Socio-Economic Review 20(2), 2022</span>
+                        <span class="coauthors">with Taeku Lee</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">Business Power and Public Policy</h3>
-                        <p class="article-journal">World Politics</p>
+                <a href="https://scholar.google.com/scholar?q=Executive+Compensation+America+Optimal+Contracting+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Executive Compensation in America</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">Executive Compensation in America</h3>
+                    <p class="book-subtitle">Optimal Contracting or Failure of Governance?</p>
+                    <p class="book-meta">
+                        <span class="publisher">Annual Review of Political Science 25, 2022</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">Institutional Change in Contemporary Capitalism</h3>
-                        <p class="article-journal">Socio-Economic Review</p>
+                <a href="https://scholar.google.com/scholar?q=Measuring+Policy+Influence+Business+Dominance+Culpepper+Hacker" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Measuring Policy Influence</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">Measuring Policy Influence under Conditions of Business Dominance</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Review of International Political Economy 28(3), 2021</span>
+                        <span class="coauthors">with Jacob Hacker & Alexander Hertel-Fernandez</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">European Integration and Corporate Governance</h3>
-                        <p class="article-journal">West European Politics</p>
+                <a href="https://scholar.google.com/scholar?q=Who+Calls+Shots+Donating+Private+Equity+Culpepper+Reinke" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Who Calls the Shots?</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">Who Calls the Shots?</h3>
+                    <p class="book-subtitle">The Donating Behavior of Private Equity Executives</p>
+                    <p class="book-meta">
+                        <span class="publisher">Interest Groups & Advocacy 9, 2020</span>
+                        <span class="coauthors">with Raphael Reinke</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">The Politics of Financial Regulation</h3>
-                        <p class="article-journal">Journal of European Public Policy</p>
+                <a href="https://scholar.google.com/scholar?q=Banking+Common+Language+Economics+Politics+Banking+Regulation+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Banking on a Common Language</span>
+                        </div>
                     </div>
+                    <h3 class="book-title">Banking on a Common Language</h3>
+                    <p class="book-subtitle">The Economics and Politics of Banking Regulation</p>
+                    <p class="book-meta">
+                        <span class="publisher">Review of International Political Economy 26(6), 2019</span>
+                    </p>
+                </a>
 
-                    <div class="article-item">
-                        <h3 class="article-title">The Political Economy of Financial Regulation</h3>
-                        <p class="article-journal">Oxford Review of Economic Policy</p>
+                <a href="https://scholar.google.com/scholar?q=Structural+Informational+Lobbying+EU+Technical+Information+Culpepper+Reinke" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>The Informational Lobbying of the EU</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                    <h3 class="book-title">The Informational Lobbying of the EU</h3>
+                    <p class="book-subtitle">How Technical Information Wins Regulatory Battles</p>
+                    <p class="book-meta">
+                        <span class="publisher">Journal of European Public Policy 26(10), 2019</span>
+                        <span class="coauthors">with Raphael Reinke</span>
+                    </p>
+                </a>
 
-        <section id="chapters" class="pub-section">
-            <div class="section-header">
-                <h2 class="section-title">Selected Book Chapters</h2>
-            </div>
+                <a href="https://scholar.google.com/scholar?q=Political+Economy+Privatization+Rich+Democracies+Culpepper+Ornstein" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>The Political Economy of Privatization</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">The Political Economy of Privatization in Rich Democracies</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Journal of European Public Policy 26(6), 2019</span>
+                        <span class="coauthors">with Darius Ornstein</span>
+                    </p>
+                </a>
 
-            <div class="chapters-list">
-                <div class="chapter-item">
-                    <h3 class="chapter-title">Employers, Public Policy, and the Politics of Decentralized Cooperation in Germany and France</h3>
-                    <p class="chapter-source"><em>Varieties of Capitalism</em>, 2001</p>
-                </div>
+                <a href="https://scholar.google.com/scholar?q=America+Peculiar+Response+Corporate+Scandals+Culpepper+Lee" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>America's Peculiar Response to Corporate Scandals</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">America's Peculiar Response to Corporate Scandals</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Perspectives on Politics 16(4), 2018</span>
+                        <span class="coauthors">with Taeku Lee</span>
+                    </p>
+                </a>
 
-                <div class="chapter-item">
-                    <h3 class="chapter-title">Capitalism, Coordination, and Economic Change: The French Political Economy since 1985</h3>
-                    <p class="chapter-source"><em>Changing France</em>, 2006</p>
-                </div>
+                <a href="https://scholar.google.com/scholar?q=Structural+Power+Public+Policy+State+Field+50+Years+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Structural Power and Public Policy</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Structural Power and Public Policy</h3>
+                    <p class="book-subtitle">A State of the Field after 50 Years</p>
+                    <p class="book-meta">
+                        <span class="publisher">Oxford Handbook of the Corporation, 2019</span>
+                    </p>
+                </a>
 
-                <div class="chapter-item">
-                    <h3 class="chapter-title">Re-Embedding Public Policy: Decentralized Collaborative Governance in France and Italy</h3>
-                    <p class="chapter-source"><em>The Economy as a Polity</em>, 2005</p>
-                </div>
+                <a href="https://scholar.google.com/scholar?q=Organisational+Capacity+Electoral+Performance+Green+Parties+Germany+Culpepper+Finnegan" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Green Parties in Germany</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">How Organisational Capacity Explains the Electoral Performance of Green Parties</h3>
+                    <p class="book-subtitle">The Case of Germany</p>
+                    <p class="book-meta">
+                        <span class="publisher">Political Studies 66(3), 2018</span>
+                        <span class="coauthors">with Jared Finnegan</span>
+                    </p>
+                </a>
 
-                <div class="chapter-item">
-                    <h3 class="chapter-title">Still a Model for the Industrialized Countries?</h3>
-                    <p class="chapter-source"><em>The German Skills Machine</em>, 1999</p>
-                </div>
+                <a href="https://scholar.google.com/scholar?q=Financial+Regulation+Comparative+Politics+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Financial Regulation in Comparative Politics</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Financial Regulation in Comparative Politics</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Oxford Handbook of the Politics of Finance, 2016</span>
+                    </p>
+                </a>
 
-                <div class="chapter-item">
-                    <h3 class="chapter-title">Individual Choice, Collective Action, and the Problem of Training Reform</h3>
-                    <p class="chapter-source"><em>The German Skills Machine</em>, 1999</p>
-                </div>
+                <a href="https://scholar.google.com/scholar?q=When+Institutions+Move+Political+Geography+Labor+Market+Reform+Culpepper+Thelen" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>When Institutions Move</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">When Institutions Move</h3>
+                    <p class="book-subtitle">The Political Geography of Labor Market Reform</p>
+                    <p class="book-meta">
+                        <span class="publisher">Oxford Review of Economic Policy 32(2), 2016</span>
+                        <span class="coauthors">with Kathleen Thelen</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Banks+Unions+New+Social+Contract+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Banks, Unions, and the New Social Contract</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Banks, Unions, and the New Social Contract</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Critical Review 26(3&4), 2014</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Trumping+Self-Interest+Corporate+Newspaper+Coverage+Shareholder+Value+Culpepper+Lee" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Trumping Self-Interest</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Trumping Self-Interest</h3>
+                    <p class="book-subtitle">Experimenting with Exposure to Corporate Newspaper Coverage and Support for Shareholder Value</p>
+                    <p class="book-meta">
+                        <span class="publisher">Socio-Economic Review 12(4), 2014</span>
+                        <span class="coauthors">with Taeku Lee</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Taking+Notes+Not+Taking+Sides+Ideology+Endowment+Effect+Media+Culpepper+Reinke" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Taking Notes But Not Taking Sides</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Taking Notes But Not Taking Sides</h3>
+                    <p class="book-subtitle">Ideology and the Endowment Effect in Media Attention</p>
+                    <p class="book-meta">
+                        <span class="publisher">Journal of European Public Policy 21(1), 2014</span>
+                        <span class="coauthors">with Raphael Reinke</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Capitalism+Institutions+Power+Study+Business+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Capitalism, Institutions and Power</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Capitalism, Institutions and Power in the Study of Business</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Oxford Handbook of Business and Government, 2010</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Political+Theory+Cognitive+Capitalism+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>The Political Theory of Cognitive Capitalism</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">The Political Theory of Cognitive Capitalism</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Oxford Handbook of Employment Relations, 2014</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Employers+Public+Policy+Politics+Decentralized+Cooperation+Culpepper+Thelen" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Employers, Public Policy, and Decentralized Cooperation</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Employers, Public Policy, and the Politics of Decentralized Cooperation</h3>
+                    <p class="book-meta">
+                        <span class="publisher">Socio-Economic Review 5(1), 2006</span>
+                        <span class="coauthors">with Kathleen Thelen</span>
+                    </p>
+                </a>
+
+                <a href="https://scholar.google.com/scholar?q=Information+Decision+Making+French+Firms+Training+Policy+Culpepper" target="_blank" rel="noopener" class="book-card-link">
+                    <div class="book-cover">
+                        <div class="book-cover-placeholder">
+                            <span>Information and Decision Making</span>
+                        </div>
+                    </div>
+                    <h3 class="book-title">Information and Decision Making</h3>
+                    <p class="book-subtitle">French Firms and Training Policy</p>
+                    <p class="book-meta">
+                        <span class="publisher">Governance 14(1), 1993</span>
+                    </p>
+                </a>
             </div>
         </section>
 
