@@ -93,22 +93,14 @@
 
         .book-cover-image {
             width: 100%;
-            aspect-ratio: 0.65;
-            background: var(--color-red);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
         }
 
-        .book-cover-image span {
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            color: white;
-            text-align: center;
-            font-weight: 600;
-            line-height: 1.3;
+        .book-cover-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .book-details {
@@ -453,8 +445,7 @@
         <div class="book-hero-inner">
             <div class="book-cover">
                 <div class="book-cover-image">
-                    <!-- Replace with: <img src="images/billionaire-backlash.jpg" alt="Billionaire Backlash"> -->
-                    <span>Billionaire Backlash</span>
+                    <img src="BB.jpg" alt="Billionaire Backlash">
                 </div>
             </div>
 
@@ -477,13 +468,23 @@
                 </div>
 
                 <div class="buy-section">
-                    <p class="buy-label">Buy Now</p>
+                    <p class="buy-label">Buy Now - UK</p>
                     <div class="buy-buttons">
-                        <a href="#" class="buy-btn primary">Bloomsbury</a>
-                        <a href="#" class="buy-btn">Amazon</a>
-                        <a href="#" class="buy-btn">Bookshop.org</a>
+                        <a href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424103/" target="_blank" rel="noopener" class="buy-btn primary">Bloomsbury</a>
+                        <a href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106/" target="_blank" rel="noopener" class="buy-btn">Amazon UK</a>
+                        <a href="https://www.waterstones.com/book/billionaire-backlash/pepper-culpepper/taeku-lee/9781399424103" target="_blank" rel="noopener" class="buy-btn">Waterstones</a>
+                        <a href="https://uk.bookshop.org/p/books/billionaire-backlash-the-age-of-corporate-scandal-and-how-it-could-save-democracy-taeku-lee/7959703?ean=9781399424103&next=t" target="_blank" rel="noopener" class="buy-btn">Bookshop.org UK</a>
                     </div>
-                    <p class="preorder-note">Available now from all major booksellers.</p>
+                </div>
+
+                <div class="buy-section">
+                    <p class="buy-label">Buy Now - US</p>
+                    <div class="buy-buttons">
+                        <a href="https://www.bloomsbury.com/us/billionaire-backlash-9781399424103" target="_blank" rel="noopener" class="buy-btn primary">Bloomsbury</a>
+                        <a href="https://www.amazon.com/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener" class="buy-btn">Amazon</a>
+                        <a href="https://www.barnesandnoble.com/w/billionaire-backlash-pepper-culpepper/1147342461?ean=9781399424103" target="_blank" rel="noopener" class="buy-btn">Barnes & Noble</a>
+                        <a href="https://bookshop.org/p/books/the-billionaire-backlash-the-age-of-corporate-scandal-and-how-it-could-save-democracy-pepper-culpepper/39c2c4614738122f?ean=9781399424103&next=t" target="_blank" rel="noopener" class="buy-btn">Bookshop.org</a>
+                    </div>
                 </div>
             </div>
         </div>

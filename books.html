@@ -135,20 +135,15 @@
 
         .featured-cover {
             aspect-ratio: 0.65;
-            background: var(--color-red);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
+            background: var(--color-border);
+            overflow: hidden;
         }
 
-        .featured-cover span {
-            font-family: var(--font-serif);
-            font-size: 1.1rem;
-            color: white;
-            text-align: center;
-            font-style: italic;
-            line-height: 1.3;
+        .featured-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .featured-info {
@@ -558,8 +553,7 @@
         <div class="featured-book">
             <span class="featured-label">New Release</span>
             <div class="featured-cover">
-                <!-- Replace with: <img src="images/billionaire-backlash.jpg" alt="Billionaire Backlash"> -->
-                <span>Billionaire Backlash</span>
+                <img src="BB.jpg" alt="Billionaire Backlash">
             </div>
             <div class="featured-info">
                 <h2 class="featured-title">Billionaire Backlash</h2>
