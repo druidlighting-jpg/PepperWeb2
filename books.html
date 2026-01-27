@@ -213,7 +213,7 @@
 
         .book-item {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 160px 1fr;
             gap: 2rem;
             padding: 2rem 0;
             border-bottom: 1px solid var(--color-border);
@@ -241,12 +241,15 @@
 
         .book-cover-small {
             aspect-ratio: 0.65;
-            background: linear-gradient(145deg, #3d3d3d 0%, #2d2d2d 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
+            overflow: hidden;
             transition: var(--transition);
+        }
+
+        .book-cover-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .book-cover-small span {
@@ -380,7 +383,7 @@
             }
 
             .book-item {
-                grid-template-columns: 100px 1fr;
+                grid-template-columns: 120px 1fr;
                 gap: 1.25rem;
             }
 
@@ -573,8 +576,7 @@
         <a href="quiet-politics.html" class="book-item">
             <div class="book-cover-small has-award">
                 <span class="award-dot"></span>
-                <!-- Replace with: <img src="images/quiet-politics.jpg" alt="Quiet Politics"> -->
-                <span>Quiet Politics and Business Power</span>
+                <img src="Quiet-Politics-And-Buisness-Power.jpg" alt="Quiet Politics and Business Power">
             </div>
             <div class="book-info">
                 <h3 class="book-title-link">Quiet Politics and Business Power</h3>
@@ -590,8 +592,7 @@
 
         <a href="changing-france.html" class="book-item">
             <div class="book-cover-small">
-                <!-- Replace with: <img src="images/changing-france.jpg" alt="Changing France"> -->
-                <span>Changing France</span>
+                <img src="ChangingFrance.jpg" alt="Changing France">
             </div>
             <div class="book-info">
                 <h3 class="book-title-link">Changing France</h3>
@@ -605,10 +606,25 @@
             </div>
         </a>
 
+        <a href="la-france-en-mutation.html" class="book-item">
+            <div class="book-cover-small">
+                <img src="LaFranceEnMutation.jpg" alt="La France en mutation">
+            </div>
+            <div class="book-info">
+                <h3 class="book-title-link">La France en mutation</h3>
+                <p class="book-subtitle-small">1980–2005</p>
+                <p class="book-meta-small">
+                    <span>Sciences Po, 2006</span>
+                    <span>with P. Hall & B. Palier</span>
+                </p>
+                <p class="book-teaser">The French edition examining how France has transformed politically and economically from 1980 to 2005.</p>
+                <span class="learn-more">Learn more →</span>
+            </div>
+        </a>
+
         <a href="creating-cooperation.html" class="book-item">
             <div class="book-cover-small">
-                <!-- Replace with: <img src="images/creating-cooperation.jpg" alt="Creating Cooperation"> -->
-                <span>Creating Cooperation</span>
+                <img src="CreatingCooperation.jpg" alt="Creating Cooperation">
             </div>
             <div class="book-info">
                 <h3 class="book-title-link">Creating Cooperation</h3>
@@ -623,8 +639,7 @@
 
         <a href="german-skills-machine.html" class="book-item">
             <div class="book-cover-small">
-                <!-- Replace with: <img src="images/german-skills-machine.jpg" alt="German Skills Machine"> -->
-                <span>The German Skills Machine</span>
+                <img src="TheGermanSkillMachine.jpg" alt="The German Skills Machine">
             </div>
             <div class="book-info">
                 <h3 class="book-title-link">The German Skills Machine</h3>
