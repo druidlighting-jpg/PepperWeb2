@@ -55,7 +55,7 @@
         }
 
         .site-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--color-charcoal);
@@ -120,7 +120,7 @@
         }
 
         .book-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 3rem;
             font-weight: 600;
             color: var(--color-charcoal);
@@ -129,7 +129,7 @@
         }
 
         .book-subtitle {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.4rem;
             font-weight: 400;
             color: var(--color-slate);
@@ -162,13 +162,58 @@
         }
 
         .book-tagline {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.3rem;
             font-style: italic;
             color: var(--color-charcoal);
+            margin-top: 3rem;
             margin-bottom: 2rem;
             padding-left: 1.5rem;
             border-left: 3px solid var(--color-red);
+        }
+
+        /* Rotating Quotes */
+        .quotes-container {
+            margin: 2rem 0;
+            position: relative;
+            min-height: 180px;
+        }
+
+        .quote-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-left: 3px solid var(--color-terracotta);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: fadeQuote 30s infinite;
+        }
+
+        .quote-box:nth-child(1) { animation-delay: 0s; }
+        .quote-box:nth-child(2) { animation-delay: 10s; }
+        .quote-box:nth-child(3) { animation-delay: 20s; }
+
+        @keyframes fadeQuote {
+            0%, 100% { opacity: 0; }
+            5%, 28% { opacity: 1; }
+            33% { opacity: 0; }
+        }
+
+        .quote-text {
+            font-family: var(--font-sans);
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--color-charcoal);
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-source {
+            font-size: 0.85rem;
+            color: var(--color-slate);
         }
 
         /* Buy Section */
@@ -307,6 +352,9 @@
             }
             .book-hero {
                 padding-top: 14rem;
+            }
+            .quotes-container {
+                margin-bottom: 8rem;
             }
             .buy-buttons {
                 flex-direction: column;
@@ -452,17 +500,21 @@
                 <span class="forthcoming-badge">New Release</span>
                 <h1 class="book-title">Billionaire Backlash</h1>
                 <p class="book-subtitle">The Age of Corporate Scandal and How It Could Save Democracy</p>
-                <div class="book-meta">
-                    <span><strong>Publisher:</strong> Bloomsbury</span>
-                    <span><strong>Co-author:</strong> Taeku Lee</span>
-                    <span><strong>Expected:</strong> 2026</span>
-                </div>
 
-                <p class="book-tagline">Corporate scandals can change the way the world works—for the better.</p>
-
-                <div class="book-description">
-                    <p>Why do corporate scandals sometimes transform politics while others fade from memory? This book examines the growing backlash against corporate malfeasance and extreme wealth, arguing that public outrage—when properly channeled—can strengthen democratic accountability.</p>
-                    <p>Drawing on extensive public opinion research across multiple countries, we show how citizens respond when corporations and the super-rich abuse their power. The result is a new framework for understanding when scandal leads to reform, and when it doesn't.</p>
+                <!-- Rotating Quotes -->
+                <div class="quotes-container">
+                    <div class="quote-box">
+                        <p class="quote-text">"In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they fade away."</p>
+                        <p class="quote-source">— Henry Farrell, Author of Underground Empire</p>
+                    </div>
+                    <div class="quote-box">
+                        <p class="quote-text">"Few books are fun to read while suggesting credible ways of addressing urgent global problems: Billionaire Backlash does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives. Through their opaque private companies, they now control essential public services. Through their newspapers and social media, they promote their interests and way-out opinions."</p>
+                        <p class="quote-source">— Paul Collier, Author of The Future of Capitalism</p>
+                    </div>
+                    <div class="quote-box">
+                        <p class="quote-text">"In an age of democratic crisis, Billionaire Backlash shows us how corporate scandals offer unexpected opportunities for societal renewal - revealing how we as citizens can still assume the power to make the rules in modern democracies. Just read it - have fun, get wiser and get out there!"</p>
+                        <p class="quote-source">— Margrethe Vestager, former EU Commissioner</p>
+                    </div>
                 </div>
 
                 <div class="buy-section">
@@ -483,6 +535,17 @@
                         <a href="https://www.barnesandnoble.com/w/billionaire-backlash-pepper-culpepper/1147342461?ean=9781399424103" target="_blank" rel="noopener" class="buy-btn">Barnes & Noble</a>
                         <a href="https://bookshop.org/p/books/the-billionaire-backlash-the-age-of-corporate-scandal-and-how-it-could-save-democracy-pepper-culpepper/39c2c4614738122f?ean=9781399424103&next=t" target="_blank" rel="noopener" class="buy-btn">Bookshop.org</a>
                     </div>
+                </div>
+
+                <p class="book-tagline">Corporate scandals can change the way the world works—for the better.</p>
+
+                <div class="book-description">
+                    <p>The surprising story of how corporate scandals - from Enron to the Facebook privacy scandal - change the way the world works for the better.</p>
+                    <p>Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals don't simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.</p>
+                    <p>Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.</p>
+                    <p>Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea - the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.</p>
+                    <p>Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.</p>
+                    <p>From Enron to Cambridge Analytica, they argue that corporate scandals aren't just symptoms of elite impunity: under the right conditions, they can become rare moments when citizens regain leverage over powerful firms and revive democratic accountability.</p>
                 </div>
             </div>
         </div>

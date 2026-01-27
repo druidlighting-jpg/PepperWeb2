@@ -122,7 +122,7 @@
         }
 
         .announcement-text strong {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-style: italic;
         }
 
@@ -161,7 +161,7 @@
         }
 
         .site-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.3rem;
             font-weight: 600;
             color: var(--color-charcoal);
@@ -193,7 +193,7 @@
             min-height: auto;
             display: flex;
             align-items: center;
-            padding: 7rem 2rem 4rem;
+            padding: 7rem 2rem 6rem;
             position: relative;
             background: url('blavatnik-school-governance-university-oxford-herzog-de-meuron-john-cairns_dezeen_936_2.jpg') center 70% / cover no-repeat;
         }
@@ -222,7 +222,7 @@
         }
 
         .hero-greeting {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.1rem;
             font-style: italic;
             color: var(--color-slate);
@@ -230,7 +230,7 @@
         }
 
         .hero-name {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 4.5rem;
             font-weight: 600;
             line-height: 1.05;
@@ -240,7 +240,7 @@
         }
 
         .hero-question {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.6rem;
             font-weight: 400;
             font-style: italic;
@@ -302,11 +302,12 @@
         .quotes-container {
             margin-top: 2rem;
             position: relative;
-            min-height: 120px;
+            min-height: 180px;
+            z-index: 2;
         }
 
         .quote-box {
-            background: rgba(249, 246, 241, 0.9);
+            background: #ffffff;
             padding: 1.5rem;
             border-left: 3px solid var(--color-terracotta);
             position: absolute;
@@ -314,13 +315,14 @@
             left: 0;
             right: 0;
             box-sizing: border-box;
+            z-index: 2;
             opacity: 0;
-            animation: fadeQuote 15s infinite;
+            animation: fadeQuote 30s infinite;
         }
 
         .quote-box:nth-child(1) { animation-delay: 0s; }
-        .quote-box:nth-child(2) { animation-delay: 5s; }
-        .quote-box:nth-child(3) { animation-delay: 10s; }
+        .quote-box:nth-child(2) { animation-delay: 10s; }
+        .quote-box:nth-child(3) { animation-delay: 20s; }
 
         @keyframes fadeQuote {
             0%, 100% { opacity: 0; }
@@ -329,7 +331,7 @@
         }
 
         .quote-text {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-style: italic;
             font-size: 1rem;
             color: var(--color-charcoal);
@@ -361,7 +363,7 @@
         }
 
         .section-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 2.5rem;
             font-weight: 500;
             color: var(--color-charcoal);
@@ -390,7 +392,7 @@
         }
 
         .about-text p:first-of-type::first-letter {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 3.5rem;
             float: left;
             line-height: 1;
@@ -423,7 +425,7 @@
         }
 
         .highlight-value {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.2rem;
             color: var(--color-charcoal);
         }
@@ -474,7 +476,7 @@
         }
 
         .book-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.8rem;
             font-weight: 500;
             color: var(--color-charcoal);
@@ -593,7 +595,7 @@
         }
 
         .content-column-header {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 1.4rem;
             font-weight: 500;
             color: var(--color-charcoal);
@@ -671,7 +673,7 @@
         }
 
         .cta-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-sans);
             font-size: 2rem;
             color: var(--color-charcoal);
             margin-bottom: 1rem;
@@ -935,25 +937,20 @@
                 <h1 class="hero-name">Pepper Culpepper</h1>
                 <p class="hero-question">Does capitalism dominate democracy, or vice versa?</p>
                 <p class="hero-bio">
-                    I'm a political scientist studying what happens when corporate power meets democratic politics. My work explores how business shapes policy—sometimes in plain sight, sometimes in the quiet corridors where the public isn't watching.
-                </p>
-                <p class="hero-affiliation">
-                    Vice Dean &amp; Blavatnik Chair at the <a href="https://www.bsg.ox.ac.uk">Blavatnik School of Government</a>, University of Oxford. Fellow of <a href="https://www.nuffield.ox.ac.uk">Nuffield College</a>.
-                </p>
-
+                    Pepper Culpepper is Blavatnik Professor of Government and Public Policy at the Blavatnik School of Government and a Professorial Fellow at Nuffield College at the University of Oxford.                </p>                <p class="hero-bio">                    He is the Vice Dean for Academic Affairs and Blavatnik Chair in Government and Public Policy. His research focuses on the intersection between capitalism and democracy, both in politics and in public policy.                </p>
                 <!-- Rotating Quotes -->
                 <div class="quotes-container">
                     <div class="quote-box">
-                        <p class="quote-text">"A fascinating and deeply researched exploration of how corporate scandals can reshape democratic politics."</p>
-                        <p class="quote-source">— Review of Billionaire Backlash</p>
+                        <p class="quote-text">"In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they fade away."</p>
+                        <p class="quote-source">— Henry Farrell, Author of Underground Empire</p>
                     </div>
                     <div class="quote-box">
-                        <p class="quote-text">"Culpepper masterfully demonstrates why some political battles stay hidden while others explode into public view."</p>
-                        <p class="quote-source">— Review of Quiet Politics and Business Power</p>
+                        <p class="quote-text">"Few books are fun to read while suggesting credible ways of addressing urgent global problems: Billionaire Backlash does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives. Through their opaque private companies, they now control essential public services. Through their newspapers and social media, they promote their interests and way-out opinions."</p>
+                        <p class="quote-source">— Paul Collier, Author of The Future of Capitalism</p>
                     </div>
                     <div class="quote-box">
-                        <p class="quote-text">"Essential reading for anyone seeking to understand the complex relationship between capitalism and democracy."</p>
-                        <p class="quote-source">— Academic Review</p>
+                        <p class="quote-text">"In an age of democratic crisis, Billionaire Backlash shows us how corporate scandals offer unexpected opportunities for societal renewal - revealing how we as citizens can still assume the power to make the rules in modern democracies. Just read it - have fun, get wiser and get out there!"</p>
+                        <p class="quote-source">— Margrethe Vestager, former EU Commissioner</p>
                     </div>
                 </div>
             </div>
@@ -969,7 +966,7 @@
     <section class="book-section" id="billionaire-backlash">
         <div class="book-inner">
             <div class="book-image-container">
-                <a href="https://linktr.ee/billionairebacklash" target="_blank" rel="noopener" class="book-image-placeholder">
+                <a href="billionaire-backlash.html" target="_blank" rel="noopener" class="book-image-placeholder">
                     <img src="BB_SOCIALS_V2_2.jpg" alt="Billionaire Backlash book cover">
                 </a>
             </div>
@@ -985,7 +982,7 @@
                     <p>Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.</p>
                 </div>
                 <div class="book-buy-links">
-                    <a href="https://linktr.ee/billionairebacklash" target="_blank" rel="noopener">Buy Now</a>
+                    <a href="billionaire-backlash.html">Buy Now</a>
                 </div>
             </div>
         </div>
