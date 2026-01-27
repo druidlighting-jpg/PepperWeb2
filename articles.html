@@ -406,7 +406,9 @@
             .header-inner { flex-direction: row; gap: 1rem; }
             nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
             .page-hero { padding-top: 14rem; }
-            .books-grid { grid-template-columns: 1fr; max-width: 250px; margin: 0 auto; }
+            .books-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: start; }
+            main { padding: 0 1rem 4rem; box-sizing: border-box; }
+            .book-card, .book-card-link { min-width: 0; }
             .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
             .footer-nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
             .scholar-cta { flex-direction: column; text-align: center; gap: 1.5rem; }
