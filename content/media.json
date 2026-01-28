@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "title": "Example Review or Interview",
-      "date": "2026-01-15T12:00:00.000Z",
-      "source": "Media Outlet",
-      "link": "https://example.com/review",
+      "title": "FT Review of Billionaire Backlash",
+      "date": "2026-01-27T12:00:00.000+00:00",
+      "source": "Financial Times",
+      "link": "https://www.ft.com/content/690ed6ac-c775-494a-8528-9439b17eb84e",
       "type": "Review",
       "excerpt": ""
     }
