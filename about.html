@@ -181,14 +181,11 @@
             text-decoration-color: var(--color-terracotta);
         }
 
-        .hero-image-frame {
-            aspect-ratio: 700 / 1100;
-        }
-
         .hero-image-frame img {
             display: block;
-            width: 100%;
+            max-width: 100%;
             height: auto;
+            aspect-ratio: auto;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
@@ -279,56 +276,6 @@
             font-size: 1.05rem;
             font-style: italic;
             color: var(--color-slate);
-        }
-
-        /* Education */
-        .education-section {
-            background: var(--color-warm-white);
-            border: 1px solid var(--color-border);
-            padding: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .education-item {
-            text-align: center;
-        }
-
-        .education-degree {
-            font-family: var(--font-serif);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--color-charcoal);
-            margin-bottom: 0.25rem;
-        }
-
-        .education-field {
-            font-size: 0.9rem;
-            color: var(--color-charcoal-light);
-            margin-bottom: 0.75rem;
-        }
-
-        .education-school {
-            font-family: var(--font-serif);
-            font-size: 1rem;
-            font-style: italic;
-            color: var(--color-slate);
-        }
-
-        .education-year {
-            font-size: 0.85rem;
-            color: var(--color-slate);
-        }
-
-        .education-note {
-            font-size: 0.8rem;
-            color: var(--color-terracotta);
-            margin-top: 0.5rem;
         }
 
         /* Teaching Areas */
@@ -447,7 +394,6 @@
                 max-width: 300px;
                 margin: 0 auto;
             }
-            .education-grid { grid-template-columns: 1fr; gap: 2rem; }
             .teaching-grid { grid-template-columns: 1fr; }
             .supervision-section { padding: 2.5rem 2rem; margin: 0 -2rem 3rem; }
         }
@@ -602,7 +548,7 @@
                 <p class="hero-bio">
                     His public commentary has appeared in the Conversation, the International Herald Tribune, Le Monde, The New Republic, Times Higher Education, and The Washington Post. A recent article about his research in the Financial Times attracted more than one million Twitter/X views.
                 </p>
-                <p class="hero-affiliation">
+                <p class="hero-bio">
                     Pepper obtained a PhD in political science from Harvard University, a BA from Duke University, where he graduated summa cum laude, and an MLitt from the University of Oxford, where he was a Marshall Scholar. He has previously taught at the Harvard Kennedy School and the European University Institute in Italy. He was an Abe Fellow at the University of Tokyo and has held long-term visiting appointments in France and Germany.
                 </p>
             </div>
@@ -610,31 +556,6 @@
     </section>
 
     <main>
-        <section class="education-section">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <p class="education-degree">Ph.D.</p>
-                    <p class="education-field">Political Science</p>
-                    <p class="education-school">Harvard University</p>
-                    <p class="education-year">1999</p>
-                </div>
-                <div class="education-item">
-                    <p class="education-degree">M.Litt.</p>
-                    <p class="education-field">Political Science</p>
-                    <p class="education-school">University of Oxford</p>
-                    <p class="education-year">1992</p>
-                    <p class="education-note">Marshall Scholar</p>
-                </div>
-                <div class="education-item">
-                    <p class="education-degree">B.A.</p>
-                    <p class="education-field">Political Science</p>
-                    <p class="education-school">Duke University</p>
-                    <p class="education-year">1990</p>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer>
