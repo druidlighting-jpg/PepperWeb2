@@ -1,10 +1,23 @@
 {
   "items": [
     {
-      "link": "https://theconversation.com/ftx-and-binance-how-latest-crypto-scandals-could-influence-public-opinion-on-digital-currency-regulation-218939",
-      "title": "FTX and Binance: How Latest Crypto Scandals Could Influence Public Opinion on Digital Currency Regulation",
+      "title": "Media Effects Revisited: Corporate Scandals, Partisan Narratives, and Cryptocurrency Regulation",
+      "date": "2026-01-02T12:00:00.000+00:00",
+      "source": "Political Science Research & Methods",
+      "link": "https://www.cambridge.org/core/journals/political-science-research-and-methods/article/media-effects-revisited-corporate-scandals-partisan-narratives-and-attitudes-toward-cryptocurrency-regulation/3E115E475EBCD127849D4B01C0CE24BA"
+    },
+    {
+      "title": "In the Metaverse, Politicians Can Hear You Scream: Corporate Scandals, Big Tech Regulation, and the Microfoundations of Focusing Events",
+      "link": "https://ora.ox.ac.uk/objects/uuid:d0021182-78d2-4358-82c0-36a89a545d39/files/s5h73pz686",
+      "source": "Perspectives on Politics",
+      "excerpt": "Forthcoming",
+      "date": "2026-01-15T12:00:00.000+00:00"
+    },
+    {
       "source": "The Conversation",
-      "date": "2023-12-01T12:00:00.000+00:00"
+      "date": "2023-12-01T12:14:00.000+00:00",
+      "title": "FTX and Binance: How Latest Crypto Scandals Could Influence Public Opinion on Digital Currency Regulation",
+      "link": "https://theconversation.com/ftx-and-binance-how-latest-crypto-scandals-could-influence-public-opinion-on-digital-currency-regulation-218939"
     }
   ]
 }
