@@ -1,10 +1,11 @@
 {
   "items": [
     {
-      "title": "Media Effects Revisited: Corporate Scandals, Partisan Narratives, and Cryptocurrency Regulation",
-      "date": "2026-01-02T12:00:00.000+00:00",
-      "source": "Political Science Research & Methods",
-      "link": "https://www.cambridge.org/core/journals/political-science-research-and-methods/article/media-effects-revisited-corporate-scandals-partisan-narratives-and-attitudes-toward-cryptocurrency-regulation/3E115E475EBCD127849D4B01C0CE24BA"
+      "title": "Weathering the Billionaire Backlash",
+      "date": "2026-02-26T12:26:00.000+00:00",
+      "source": "Spear's",
+      "link": "https://spearswms.com/wealth/weathering-the-billionaire-backlash/",
+      "excerpt": "﻿﻿﻿Billionaires typically split their time and their capital between homes in many places, whereas for most citizens their democratic systems are their only homes. Those fragile homes are in need of rebuilding. By all means, bring your economic innovation and skills at capital allocation with you. But leave the hubris on the yacht. "
     },
     {
       "title": "In the Metaverse, Politicians Can Hear You Scream: Corporate Scandals, Big Tech Regulation, and the Microfoundations of Focusing Events",
@@ -14,10 +15,16 @@
       "date": "2026-01-15T12:00:00.000+00:00"
     },
     {
-      "source": "The Conversation",
-      "date": "2023-12-01T12:14:00.000+00:00",
-      "title": "FTX and Binance: How Latest Crypto Scandals Could Influence Public Opinion on Digital Currency Regulation",
-      "link": "https://theconversation.com/ftx-and-binance-how-latest-crypto-scandals-could-influence-public-opinion-on-digital-currency-regulation-218939"
+      "title": "Media Effects Revisited: Corporate Scandals, Partisan Narratives, and Cryptocurrency Regulation",
+      "date": "2026-01-02T12:00:00.000+00:00",
+      "source": "Political Science Research & Methods",
+      "link": "https://www.cambridge.org/core/journals/political-science-research-and-methods/article/media-effects-revisited-corporate-scandals-partisan-narratives-and-attitudes-toward-cryptocurrency-regulation/3E115E475EBCD127849D4B01C0CE24BA"
+    },
+    {
+      "link": "https://doi.org/10.1177/00104140241252072",
+      "source": "Comparative Political Studies",
+      "title": "'The Economy is Rigged’: Inequality Narratives, Fairness, and Support for Redistribution in Six Countries",
+      "date": "2025-03-01T12:00:00.000+00:00"
     }
   ]
 }

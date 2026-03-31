@@ -1,35 +1,64 @@
 {
   "items": [
     {
+      "title": "A Right Good Scandal -- Prospect Review of Billionaire Backlash",
+      "date": "2026-03-04T12:00:00.000+00:00",
+      "source": "Prospect",
+      "link": "https://www.prospectmagazine.co.uk/culture/72576/review-pepper-d-culpepper-and-taeku-lee-billionaire-backlash",
+      "type": "Review",
+      "excerpt": "\"Scandals can cause 'latent opinion' to harden into outrage, making it too embarrassing, at least temporarily, for the lobbyists’ pet legislators to stand in the way of action.\" "
+    },
+    {
+      "source": "New Books Network",
+      "link": "https://newbooksnetwork.com/pepper-culpepper-and-taeku-lee-billionaire-backlash-the-age-of-corporate-scandal-and-how-it-could-save-democracy-bloomsbury-2026",
+      "title": "New Books Network Podcast on Billionaire Backlash",
+      "date": "2026-03-14T12:00:00.000+00:00",
+      "type": "Podcast"
+    },
+    {
+      "title": "Using Corporate Scandals to Drive Political Change",
+      "date": "2026-03-09T12:00:00.000+00:00",
+      "link": "https://podcasts.apple.com/gb/podcast/using-corporate-scandals-to-drive-political-change/id1765927918?i=1000754039804",
+      "source": "The Home Front -- Podcast with Reed Galen ",
+      "type": "Podcast"
+    },
+    {
+      "date": "2026-02-03T11:00:00.000+00:00",
+      "link": "https://www.kirkusreviews.com/book-reviews/pepper-culpepper/the-billionaire-backlash/",
+      "title": "Kirkus Review of Billionaire Backlash",
+      "source": "Kirkus Reviews",
+      "excerpt": "\"A smart set of case studies in support of greater corporate responsibility.\" ",
+      "type": "Review"
+    },
+    {
       "title": "FT Review of Billionaire Backlash",
       "date": "2026-01-27T12:00:00.000+00:00",
       "source": "Financial Times",
       "link": "https://www.ft.com/content/690ed6ac-c775-494a-8528-9439b17eb84e",
       "type": "Review",
-      "excerpt": ""
+      "excerpt": "\"It is a singular achievement of this well-timed, tightly written book that it ends on an optimistic note about democracy and ‘good populism’, when corporate-backed ‘bad populist’ autocracies seem to be in the ascendant.\""
     },
     {
       "title": "Book launch event with Will Hutton and Ngaire Woods",
       "date": "2026-01-29T17:30:00.000+00:00",
-      "source": "Blavatnik School of Government",
+      "source": "Blavatnik School of Government, University of Oxford",
       "link": "https://www.youtube.com/watch?v=jZdPxQmqRDQ",
       "type": "TV/Video"
     },
     {
-      "title": "Times Radio Interview with Hugo Rifkind about Billionaire Backlash",
-      "source": "Times Radio",
-      "link": "https://linkprotect.cudasvc.com/url?a=https%3a%2f%2fwww.thetimes.com%2fradio%2fshow%2f20260128-29088%2f2026-01-28&c=E,1,I-qtO0r2Zm81S_I1H8kZ340nQmkhWrkvru4cO8EVlg48blfSXm28cyKG7ICLbZVbgYQMVBaF5AUEdw1faLF1grfNZXyUP_Iyz6DpjdHxzmM,&typo=1",
-      "excerpt": "From 50:40-1:00:10",
-      "date": "2026-01-27T10:45:00.000+00:00",
-      "type": "Interview"
+      "title": "Billionaire Backlash and the Epstein Scandal -- Podcast with Andrew Keen",
+      "date": "2026-02-12T15:00:00.000+00:00",
+      "source": "Keen on America Podcast",
+      "link": "https://podcasts.apple.com/gb/podcast/can-billionaire-backlash-save-democracy-pepper-culpepper/id1448694012?i=1000749441364",
+      "type": "Podcast"
     },
     {
-      "date": "2026-02-03T11:00:00.000+00:00",
-      "link": "https://www.kirkusreviews.com/book-reviews/pepper-culpepper/the-billionaire-backlash/",
-      "title": "Billionaire Backlash Review",
-      "source": "Kirkus Reviews",
-      "excerpt": "A smart set of case studies in support of greater corporate responsibility. ",
-      "type": "Review"
+      "title": "MoneyWeek Review of Billionaire Backlash",
+      "date": "2026-02-20T12:00:00.000+00:00",
+      "source": "MoneyWeek",
+      "link": "https://www.pressreader.com/uk/money-week/20260220/282059103464704",
+      "type": "Review",
+      "excerpt": "\"This book tells us a lot about how scandals can drive political change.... [it] usefully shines a light into a little studied area at the intersection between business and politics.\""
     }
   ]
 }
