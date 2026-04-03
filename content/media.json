@@ -1,19 +1,26 @@
 {
   "items": [
     {
+      "title": "Can Corporate Scandals Reinvigorate Democracy?",
+      "date": "2026-04-01T12:00:00.000+01:00",
+      "source": "The Science of Politics",
+      "link": "https://www.niskanencenter.org/can-corporate-scandals-reinvigorate-democracy/",
+      "type": "Podcast"
+    },
+    {
+      "title": "Interview with Chuck Collins of Patriotic Millionaires for the 92nd Street Y in New York",
+      "date": "2026-03-17T19:00:00.000+00:00",
+      "source": "92nd Street Y New York",
+      "link": "https://www.youtube.com/watch?v=4uxuGgThS-A",
+      "type": "Interview"
+    },
+    {
       "title": "A Right Good Scandal -- Prospect Review of Billionaire Backlash",
       "date": "2026-03-04T12:00:00.000+00:00",
       "source": "Prospect",
       "link": "https://www.prospectmagazine.co.uk/culture/72576/review-pepper-d-culpepper-and-taeku-lee-billionaire-backlash",
       "type": "Review",
       "excerpt": "\"Scandals can cause 'latent opinion' to harden into outrage, making it too embarrassing, at least temporarily, for the lobbyists’ pet legislators to stand in the way of action.\" "
-    },
-    {
-      "source": "New Books Network",
-      "link": "https://newbooksnetwork.com/pepper-culpepper-and-taeku-lee-billionaire-backlash-the-age-of-corporate-scandal-and-how-it-could-save-democracy-bloomsbury-2026",
-      "title": "New Books Network Podcast on Billionaire Backlash",
-      "date": "2026-03-14T12:00:00.000+00:00",
-      "type": "Podcast"
     },
     {
       "title": "Using Corporate Scandals to Drive Political Change",
@@ -59,6 +66,13 @@
       "link": "https://www.pressreader.com/uk/money-week/20260220/282059103464704",
       "type": "Review",
       "excerpt": "\"This book tells us a lot about how scandals can drive political change.... [it] usefully shines a light into a little studied area at the intersection between business and politics.\""
+    },
+    {
+      "source": "New Books Network",
+      "link": "https://newbooksnetwork.com/pepper-culpepper-and-taeku-lee-billionaire-backlash-the-age-of-corporate-scandal-and-how-it-could-save-democracy-bloomsbury-2026",
+      "title": "New Books Network Podcast on Billionaire Backlash",
+      "date": "2026-03-14T12:00:00.000+00:00",
+      "type": "Podcast"
     }
   ]
 }
