@@ -1,18 +1,19 @@
 {
   "items": [
     {
+      "title": "Pepper Culpepper Says Good Populism Can Save Democracy",
+      "date": "2026-06-24T12:00:00.000+01:00",
+      "source": "Democracy Paradox",
+      "link": "https://democracyparadox.com/2026/06/24/pepper-culpepper-says-good-populism-can-save-democracy/",
+      "type": "Podcast",
+      "excerpt": "In which I am called a contrarian -- what! -- and lay out the case for why a real abundance depends on regulation anchored in public support."
+    },
+    {
       "link": "https://www.abc.net.au/listen/programs/latenightlive/corporate-scandals-pepper-culpepper-billionaire-backlash/106448126",
       "source": "Late NIght Live with David Marr -- ABC",
       "title": "What If Corporate Scandals are Actually Good for the World?",
       "date": "2026-04-16T14:15:00.000+01:00",
       "type": "Interview"
-    },
-    {
-      "title": "Can Corporate Scandals Reinvigorate Democracy?",
-      "date": "2026-04-01T12:00:00.000+01:00",
-      "source": "The Science of Politics",
-      "link": "https://www.niskanencenter.org/can-corporate-scandals-reinvigorate-democracy/",
-      "type": "Podcast"
     },
     {
       "title": "Interview with Chuck Collins of Patriotic Millionaires",
@@ -38,6 +39,14 @@
       "excerpt": "\"It is a singular achievement of this well-timed, tightly written book that it ends on an optimistic note about democracy and ‘good populism’, when corporate-backed ‘bad populist’ autocracies seem to be in the ascendant.\""
     },
     {
+      "date": "2026-02-03T11:00:00.000+00:00",
+      "link": "https://www.kirkusreviews.com/book-reviews/pepper-culpepper/the-billionaire-backlash/",
+      "title": "Kirkus Review of Billionaire Backlash",
+      "source": "Kirkus Reviews",
+      "excerpt": "\"A smart set of case studies in support of greater corporate responsibility.\" ",
+      "type": "Review"
+    },
+    {
       "title": "Using Corporate Scandals to Drive Political Change",
       "date": "2026-03-09T12:00:00.000+00:00",
       "link": "https://podcasts.apple.com/gb/podcast/using-corporate-scandals-to-drive-political-change/id1765927918?i=1000754039804",
@@ -45,12 +54,11 @@
       "type": "Podcast"
     },
     {
-      "date": "2026-02-03T11:00:00.000+00:00",
-      "link": "https://www.kirkusreviews.com/book-reviews/pepper-culpepper/the-billionaire-backlash/",
-      "title": "Kirkus Review of Billionaire Backlash",
-      "source": "Kirkus Reviews",
-      "excerpt": "\"A smart set of case studies in support of greater corporate responsibility.\" ",
-      "type": "Review"
+      "title": "Can Corporate Scandals Reinvigorate Democracy?",
+      "date": "2026-04-01T12:00:00.000+01:00",
+      "source": "The Science of Politics",
+      "link": "https://www.niskanencenter.org/can-corporate-scandals-reinvigorate-democracy/",
+      "type": "Podcast"
     },
     {
       "title": "Book launch event with Will Hutton and Ngaire Woods",
